@@ -1,0 +1,31 @@
+<head>
+  <meta charset="utf-8">
+
+  {# force Internet Explorer to use the latest rendering engine available #}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>
+    {% if wp_title %}
+      {{ wp_title }} - {{ site.name }}
+    {% else %}
+      {{ site.name }}
+    {% endif %}
+  </title>
+
+  {# ldFriendly" content="True"> #}
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="apple-touch-icon" href="">
+  <link rel="icon" href="">
+  <!--[if IE]>
+  <link rel="shortcut icon" href="">
+  <![endif]-->
+  <meta name="msapplication-TileColor" content="#f01d4f">
+  <meta name="theme-color" content="#121212">
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="pingback" href="{{ site.pingback_url }}"/>
+
+  {{ function('wp_head') }}
+</head>
