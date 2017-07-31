@@ -5,21 +5,14 @@
 | Theme Supports
 |--------------------------------------------------------------------------
 |
-| Here you may specify an array of paths where to load templates.
+| Theme Supports are specific features that may be enabled by theme authors.
+| Some features have already been enabled for you, but feel free
+| to enable/disable these features as you like.
 |
-| Default path: 'resources/views'
-|
+| More information at https://codex.wordpress.org/Theme_Features
 */
 
-//'automatic-feed-links'
-//'post-thumbnails'
-//'post-formats'
-//'custom-header'
-//'custom-background'
-//'html5'
-
 // Enables Post Formats support for a theme.
-// More information at https://codex.wordpress.org/Post_Formats
 add_theme_support('post-formats', [
     'aside',   // Typically styled without a title.
     'audio',   // An audio file or playlist.
