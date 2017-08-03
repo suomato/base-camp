@@ -1,0 +1,29 @@
+.base-camp-article {
+  margin-bottom: 2.5rem;
+  .article-meta {
+    margin-bottom: -0.2rem;
+    margin-top: -0.8rem;
+    i {
+      font-size: 1rem;
+      color: $red;
+    }
+    * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    time {
+      margin-right: 0.5rem;
+    }
+    span {
+      color: #7a7a7a;
+    }
+  }
+  ul.article-tags {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    li {
+      display: inline-block;
+      margin-right: .4rem;
+    }
+  }
+}

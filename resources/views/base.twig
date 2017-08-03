@@ -1,9 +1,23 @@
-{% include 'header/header.twig' %}
+{% include 'header/index.twig' %}
 
-{% block content %}
-  Sorry, no content
-{% endblock %}
+<section class="section">
+  <div class="container">
+    <div class="columns">
 
-{% include 'footer/footer.twig' %}
+      <div class="column is-7">
+        {% block content %}
+          Sorry, no content
+        {% endblock %}
+      </div>
+
+      <aside class="column is-4 is-offset-1">
+        {{ main_sidebar }}
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% include 'footer/index.twig' %}
 
 

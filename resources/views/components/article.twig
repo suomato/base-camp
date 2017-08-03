@@ -1,0 +1,23 @@
+<article class="base-camp-article">
+
+  <header>
+    <h2 class="title is-h2">
+      <a href="{{ post.link }}">{{ post.title }}</a>
+    </h2>
+    <div class="article-meta">
+      <time><i class="fa fa-calendar" aria-hidden="true"></i> <span>{{ post.date | date('d.m.Y') }}</span></time>
+      <a href="{{ post.author.link }}"><i class="fa fa-user" aria-hidden="true"></i></a> <span>{{ post.author }}</span>
+    </div>
+  </header>
+
+  <p class="content">{{ post.content }}</p>
+
+  <footer>
+    <ul class="article-tags">
+      {% for tag in post.tags %}
+        <li><a href="{{ tag.link }}" class="button is-danger is-outlined is-small">{{ tag.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </footer>
+
+</article>
