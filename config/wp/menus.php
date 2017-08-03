@@ -3,10 +3,9 @@
 /**
  * Registers a custom Navigation Menu in the custom menu editor
  */
-function register_main_menu()
+function base_camp_register_menus()
 {
     register_nav_menu('main_menu', __('Main menu', 'base-camp'));
 }
 
-// Register main menu
-add_action('after_setup_theme', 'register_main_menu');
+add_action('after_setup_theme', 'base_camp_register_menus');

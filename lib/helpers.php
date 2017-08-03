@@ -34,12 +34,23 @@ function assets($key)
  * Path is relative to the theme root.
  *
  * @param $path
+ * @param bool $recursive
  */
-function require_once_dir($path)
+function require_once_dir($path, $recursive = false)
 {
     $full_path = __DIR__ . "/../$path";
 
-    foreach (glob("$full_path/*.php") as $filename) {
-        require_once("$full_path/" . basename($filename));
+    if ($recursive) {
+        foreach (glob("$full_path/*") as $filename) {
+            if (is_dir($filename)) {
+                require_once_dir($path . "/" . basename($filename), true);
+            } else {
+                require_once("$full_path/" . basename($filename));
+            }
+        }
+    } else {
+        foreach (glob("$full_path/*.php") as $filename) {
+            require_once("$full_path/" . basename($filename));
+        }
     }
 }

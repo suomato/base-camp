@@ -12,7 +12,7 @@ if ( ! class_exists('Timber')) {
               </div>';
     });
 
-    // Notice on
+    // Notice on front pages
     add_filter('template_include', function () {
         return get_stylesheet_directory() . '/no-timber.html';
     });
