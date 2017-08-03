@@ -9,12 +9,8 @@ var inProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: {
-    app: [
-      './resources/assets/js/main.js',
-      './resources/assets/sass/main.scss'
-    ]
+    app: glob.sync("./resources/assets/+(s[ac]ss|js)/main.+(s[ac]ss|js)")
   },
-
   output: {
     path: path.resolve(__dirname, './static/'),
     filename: 'js/[name].[chunkhash].js'
@@ -26,7 +22,13 @@ module.exports = {
         test: /\.s[ac]ss$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: ["css-loader", "sass-loader"],
+          use: [
+            {
+              loader: "css-loader",
+              options: {minimize: inProduction},
+            },
+            "sass-loader",
+          ],
         }),
       },
       {
@@ -39,13 +41,14 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin("css/[name].[contenthash].css"),
-    new PurifyCSSPlugin({
-      paths: glob.sync(path.join(__dirname, 'resources/views/**/*.twig')),
-      minimize: inProduction
-    }),
-    new CleanWebpackPlugin(['static'], {
-      watch: true
-    }),
+    // ************
+    // Breaks Bulma
+    //*************
+    // new PurifyCSSPlugin({
+    //   paths: glob.sync(path.join(__dirname, 'resources/views/**/*.twig')),
+    //   minimize: inProduction
+    // }),
+    new CleanWebpackPlugin(['static']),
     new ManifestPlugin(),
   ],
 };
