@@ -9,10 +9,12 @@ function base_camp_scripts_and_styles()
     wp_register_style('base-camp-styles', assets('app.css'), [], '', 'all');
 
     // Register scripts
-    wp_register_script('base-camp-scripts', assets('app.js'), [], '', true);
+    wp_register_script('base-camp-vendor', assets('vendor.js'), [], '', true);
+    wp_register_script('base-camp-scripts', assets('app.js'), ['base-camp-vendor'], '', true);
 
     // Enqueue scripts and styles
     wp_enqueue_script('base-camp-scripts');
+    wp_enqueue_script('base-camp-vendor');
     wp_enqueue_style('base-camp-styles');
 }
 
