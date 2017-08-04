@@ -12,23 +12,24 @@
 <body>
 <div class="pageloader is-active"></div>
 
-<header>
-  <div class="container">
-    {% include "components/navbar.twig" %}
-  </div>
+<div id="app">
 
-  <section class="hero is-medium is-primary is-bold has-text-centered">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          {{ site.title }}
-        </h1>
-        <h2 class="subtitle">
-          {{ site.description }}
-        </h2>
-      </div>
+  <header>
+    <div class="container">
+      {% include "components/navbar.twig" %}
     </div>
-  </section>
+    <section class="hero is-medium is-primary is-bold has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            {{ site.title }}
+          </h1>
+          <h2 class="subtitle">
+            {{ site.description }}
+          </h2>
+        </div>
+      </div>
+    </section>
 
-</header>
+  </header>
 
