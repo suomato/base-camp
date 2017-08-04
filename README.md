@@ -10,10 +10,10 @@
   * Separates the logic from presentation
 * [Webpack](https://webpack.github.io/)
   * Sass / Scss for stylesheets (Minimize in production)
-  * ES6 for Javascript(Minimize in production)
+  * ES6 for Javascript (Minimize in production)
   * Automatic Cache Busting
   * Split javascript code to two chunks, app.js and vendor.js
-  * [Vuejs](https://vuejs.org/)for boosting frontend development
+  * [Vuejs](https://vuejs.org/) for boosting frontend development
   
 ## Requirements
 * [Wordpress](https://wordpress.org/) >= v4.8.0
