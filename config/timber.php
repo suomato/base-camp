@@ -6,7 +6,7 @@ if ( ! class_exists('Timber')) {
     // Notice on admin pages
     add_action('admin_notices', function () {
         echo '<div class="error">
-                  <p>Timber not activated. Make sure you activate the plugin in  
+                  <p>Timber not activated. Make sure you activate the plugin in
                       <a href="' . esc_url(admin_url('plugins.php#timber')) . '">' . esc_url(admin_url('plugins.php')) . '</a>
                   </p>
               </div>';
@@ -32,3 +32,24 @@ if ( ! class_exists('Timber')) {
 */
 
 Timber::$dirname = ['resources/views'];
+
+
+/**
+ * Adds data to Timber context.
+ *
+ * @param $data
+ *
+ * @return mixed
+ */
+function add_to_context($data)
+{
+    // Add Main Menu to Timber context object
+    $data['menu'] = new TimberMenu();
+
+    // Add main-sidebar to Timber context object
+    $data['main_sidebar'] = Timber::get_widgets('main-sidebar');
+
+    return $data;
+}
+
+add_filter('timber_context', 'add_to_context');
