@@ -5,7 +5,7 @@
       <a href="{{ post.link }}">{{ post.title }}</a>
     </h2>
     <div class="article-meta">
-      <time><i class="fa fa-calendar" aria-hidden="true"></i> <span>{{ post.date | date('d.m.Y') }}</span></time>
+      <time class="timestamp"><i class="fa fa-calendar" aria-hidden="true"></i> <span>{{ post.date }}</span></time>
       <a href="{{ post.author.link }}"><i class="fa fa-user" aria-hidden="true"></i></a> <span>{{ post.author }}</span>
     </div>
   </header>

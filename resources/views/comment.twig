@@ -1,0 +1,29 @@
+<div class="blog-comment {{ comment.comment_type }}" id="blog-comment-{{ comment.ID }}">
+
+  <article class="message is-primary">
+    <div class="message-body">
+      <div class="columns">
+      <div class="column is-2">
+          <img src="{{ comment.author.avatar }}" />
+        </div>
+        <div class="column">
+          <div><strong>{{ comment.author.name }}</strong></div>
+          <time class="timestamp"><small>{{ comment.date }} {{ comment.time }}</small></time><br /><br />
+          <div>{{ comment.comment_content|wpautop }}</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section class="comment-box">
+    <!-- child comments -->
+    {% if post.comments %}
+    <div class="comments">
+      {% for cmt in comment.children %}
+      {% include "comment.twig" with {comment:cmt} %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </section>
+</div>
