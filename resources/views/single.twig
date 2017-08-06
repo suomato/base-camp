@@ -1,31 +1,31 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<article>
-  <h1 class="title is-1">{{ post.title }}</h1>
-  <h5 class="subtitle is-5">
-    <time class="timestamp">
-      <small>{{ post.date }} {{ post.time }}</small>
-    </time>
-  </h5>
-  <p>
-    {{ post.content }}
-  </p>
-</article>
-<hr />
+  <article>
+    <h1 class="title is-2">{{ post.title }}</h1>
+    <h5 class="subtitle is-5">
+      <time class="timestamp">
+        <small>{{ post.date }} {{ post.time }}</small>
+      </time>
+    </h5>
+    <p>
+      {{ post.content }}
+    </p>
+  </article>
+  <hr />
 
-<section class="comment-box">
-  <div class="comments">
-    {% if post.comments is not empty %}
-    <h3 class="title is-3">Comments</h3>
-    {% for comment in post.comments %}
-    {% include "comment.twig" %}
-    {% endfor %}
+  <section class="comment-box">
+    <div class="comments">
+      {% if post.comments is not empty %}
+        <h3 class="title is-3">Comments</h3>
+        {% for comment in post.comments %}
+          {% include "comment.twig" %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    {% if post.comment_status == "open" %}
+      {% include "comment-form.twig" %}
     {% endif %}
-  </div>
-
-  {% if post.comment_status == "open" %}
-    {% include "comment-form.twig" %}
-  {% endif %}
-</section>
+  </section>
 {% endblock %}
