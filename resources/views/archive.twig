@@ -1,0 +1,9 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <h1 class="title is-2">{{ title }}</h1>
+    {% for post in posts %}
+      {% include 'components/article.twig' %}
+      <hr />
+    {% endfor %}
+{% endblock %}
