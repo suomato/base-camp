@@ -1,6 +1,6 @@
 # Base Camp
 
-> Awesome WordPress starter theme for developer based on modern web technologies. **Work in progress.**
+> Awesome WordPress starter theme for developers based on modern web technologies. **Work in progress.**
 
 ## Features
 * [Bulma](http://bulma.io/) (Responsive CSS framework based on Flexbox)
