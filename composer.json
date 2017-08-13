@@ -1,6 +1,7 @@
 {
   "name": "suomato/base-camp",
   "description": "WordPress starter theme for developer based on Timber-library",
+  "version": "1.0.0-beta.1",
   "license": "MIT",
   "type": "wordpress-theme",
   "minimum-stability": "stable",
