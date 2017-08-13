@@ -14,7 +14,7 @@
   * Automatic Cache Busting
   * Split javascript code to two chunks, app.js and vendor.js
   * [Vuejs](https://vuejs.org/) for boosting frontend development
-* Luna (Command-line interface included with Base Camp.)
+* Luna (Command-line interface included with Base Camp)
   
 ## Requirements
 * [Wordpress](https://wordpress.org/) >= v4.8.0
