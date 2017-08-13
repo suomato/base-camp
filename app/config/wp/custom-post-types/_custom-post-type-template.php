@@ -20,10 +20,9 @@ function custom_post_type_movie()
     ];
 
 // Set other options for Custom Post Type
-
     $args = [
         'label'               => __('movies', 'base-camp'),
-        'description'         => __('Movie news and reviews', 'base-camp'),
+        'description'         => __('Movie', 'base-camp'),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
         'supports'            => [
@@ -37,7 +36,7 @@ function custom_post_type_movie()
             'custom-fields',
         ],
         // You can associate this CPT with a taxonomy or custom taxonomy.
-        'taxonomies'          => ['genres'],
+        'taxonomies'          => [''],
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.

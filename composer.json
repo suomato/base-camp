@@ -26,7 +26,7 @@
   },
   "require": {
     "php":"^7.0",
-    "wpackagist-plugin/timber-library": "1.3.4",
+    "wpackagist-plugin/timber-library": "1.4.1",
     "wpackagist-plugin/advanced-custom-fields": "4.4.11",
     "symfony/var-dumper": "^3.3",
     "symfony/console": "^3.3",
