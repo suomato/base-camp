@@ -6,12 +6,18 @@
     </h2>
     <div class="article-meta">
       <time class="timestamp"><i class="fa fa-calendar" aria-hidden="true"></i> <span>{{ post.date }}</span></time>
-      <a href="{{ post.author.link }}"><i class="fa fa-user" aria-hidden="true"></i></a> <span>{{ post.author }}</span>
+      <div>
+        <a href="{{ post.author.link }}"><i class="fa fa-user" aria-hidden="true"></i></a> <span>{{ post.author }}</span>
+      </div>
+      {% if post.can_edit %}
+        <div><a href="{{ post.get_edit_url }}"><i class="fa fa-pencil" aria-hidden="true"></i></a> <span>Edit</span></div>
+      {% endif %}
     </div>
   </header>
 
   <p class="content">{{ post.content }}</p>
 
+  {# Tags #}
   <footer>
     <ul class="article-tags">
       {% for tag in post.tags %}
