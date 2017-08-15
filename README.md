@@ -33,8 +33,8 @@
 
 ## Structure
 ```
-base-camp                                           # Theme root
-├── app                                             # Theme logic
+base-camp/                                          # Theme root
+├── app/                                            # Theme logic
 │   ├── commands/                                   # Theme CLI(Luna) commands
 │   ├── config/                                     # Theme config
 │   │   ├── wp/                                     # WordPress specific config
@@ -53,9 +53,9 @@ base-camp                                           # Theme root
 │   ├── assets/                                     # Front-end assets
 │   │   ├── js/                                     # Javascripts
 │   │   │   └── components/                         # Vue Components
-│   │   ├── sass                                    # styles
+│   │   ├── sass/                                   # styles
 │   │   │   └── components/                         # partials
-│   ├── views                                       # Theme Twig files
+│   ├── views/                                      # Theme Twig files
 │   │   ├── components/                             # partials
 │   │   ├── footer/                                 # theme footer templates
 │   │   └── header/                                 # theme header templates
