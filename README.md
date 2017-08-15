@@ -60,3 +60,19 @@ base-camp/                                          # Theme root
 │   │   ├── footer/                                 # theme footer templates
 │   │   └── header/                                 # theme header templates
 ```
+
+## Luna (Command-line interface)
+> Luna has only one command at the moment. The Command helps you to create a Custom Post Type very fast.
+
+```
+php luna make:custom-post-type {name}
+```
+
+> The argument is singular form. if noun have irregular plural which do not behave in standard way(singular+s),
+exception can be defined by plural option e.g.
+
+```
+php luna make:custom-post-type person --plural=people
+```
+
+The new file is created to `/app/config/wp/custom-post-types/{name}.php`
