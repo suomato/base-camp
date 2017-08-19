@@ -3,6 +3,14 @@
   "description": "WordPress starter theme for developer based on Timber-library",
   "version": "1.0.0-beta.1",
   "license": "MIT",
+  "keywords": [
+    "bulma",
+    "webpack",
+    "timber",
+    "starter-theme",
+    "wordpress",
+    "composer"
+  ],
   "type": "wordpress-theme",
   "minimum-stability": "stable",
   "authors": [
@@ -26,7 +34,7 @@
     }
   },
   "require": {
-    "php":"^7.0",
+    "php": "^7.0",
     "wpackagist-plugin/timber-library": "1.4.1",
     "wpackagist-plugin/advanced-custom-fields": "4.4.11",
     "symfony/var-dumper": "^3.3",
