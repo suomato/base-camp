@@ -28,6 +28,7 @@
 * `cd base-camp`
 * `composer install`
 * `yarn` **or** `npm install`
+* define your dev-server url to `webpack.config.js` file
 * `yarn watch` **or** `npm run watch`
 * Happy developing :)
 
