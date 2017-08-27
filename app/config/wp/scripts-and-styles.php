@@ -16,6 +16,12 @@ function base_camp_scripts_and_styles()
     wp_enqueue_script('base-camp-scripts');
     wp_enqueue_script('base-camp-vendor');
     wp_enqueue_style('base-camp-styles');
+
+    // comment reply script for threaded comments
+    if (is_singular() && comments_open() && (get_option('thread_comments') == 1)) {
+        wp_enqueue_script('comment-reply');
+    }
+
 }
 
 add_action('wp_enqueue_scripts', 'base_camp_scripts_and_styles', 999);

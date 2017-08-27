@@ -1,4 +1,4 @@
-<div id="respond" class="comment-form">
+<div id="respond" class="comment-form-wrapper">
   <form id="commentform" class="comment-form" method="post" action="{{ site.wp_link }}/wp-comments-post.php">
     {% if user %}
       <input type="hidden" name="author" value="{{ user.name }}">
@@ -57,9 +57,11 @@
         <input type="submit" name="Submit" class="button is-primary" value="Post Comment"/>
       </p>
       <p class="control">
-        <input type="reset" class="button is-light" value="Cancel"/>
+        <input type="reset" class="button is-light" value="Reset"/>
+      </p>
+      <p class="control">
+        {{ cancel_link }}
       </p>
     </div>
-
   </form>
 </div>

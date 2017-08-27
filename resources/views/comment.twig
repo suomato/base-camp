@@ -1,6 +1,8 @@
 <div class="blog-comment {{ comment.comment_type }}" id="blog-comment-{{ comment.ID }}">
 
-  <article class="message is-primary">
+  <article id="comment-{{ comment.ID }}" class="message is-primary">
+
+    {# Message body #}
     <div class="message-body">
       <div class="columns">
         <div class="column is-2">
@@ -13,11 +15,16 @@
           </time>
           <br/><br/>
           <div>{{ comment.comment_content|wpautop }}</div>
+
         </div>
       </div>
+
+      {# Message Footer #}
+      <footer>
+        {{ comment.reply_link('<i class="fa fa-reply" aria-hidden="true"></i> <span>Reply</span>') }}
+      </footer>
     </div>
   </article>
-
   <section class="comment-box">
     <!-- child comments -->
     {% if post.comments %}
