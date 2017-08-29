@@ -23,6 +23,18 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress-l18n-tool",
+        "version": "@dev",
+        "source": {
+          "url": "https://develop.svn.wordpress.org/",
+          "type": "svn",
+          "reference": "trunk"
+        }
+      }
     }
   ],
   "extra": {
@@ -40,7 +52,8 @@
     "symfony/var-dumper": "^3.3",
     "symfony/console": "^3.3",
     "league/flysystem": "^1.0",
-    "symfony/finder": "^3.3"
+    "symfony/finder": "^3.3",
+    "wordpress-l18n-tool": "@dev"
   },
   "autoload": {
     "files": [

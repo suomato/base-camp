@@ -2,3 +2,5 @@ vendor
 node_modules
 static
 .idea
+resources/languages/*
+!resources/languages/.gitkeep
