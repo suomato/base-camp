@@ -35,8 +35,13 @@
           "reference": "trunk"
         }
       }
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/suomato/luna"
     }
   ],
+
   "extra": {
     "installer-paths": {
       "../../plugins/{$name}/": [
@@ -53,7 +58,8 @@
     "symfony/console": "^3.3",
     "league/flysystem": "^1.0",
     "symfony/finder": "^3.3",
-    "wordpress-l18n-tool": "@dev"
+    "wordpress-l18n-tool": "@dev",
+    "suomato/luna": "dev-master"
   },
   "autoload": {
     "files": [

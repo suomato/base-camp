@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41e2c691150bfba4f3a8c067acd102e3",
+    "content-hash": "132d5e58d5a49122821424498a466b0e",
     "packages": [
         {
             "name": "composer/installers",
@@ -252,6 +252,51 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "suomato/luna",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/suomato/luna.git",
+                "reference": "90683dd206ec129ca3d2dc6f62546aeb0032908e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/suomato/luna/zipball/90683dd206ec129ca3d2dc6f62546aeb0032908e",
+                "reference": "90683dd206ec129ca3d2dc6f62546aeb0032908e",
+                "shasum": ""
+            },
+            "require": {
+                "league/flysystem": "^1.0",
+                "php": "^7.0",
+                "symfony/console": "^3.3",
+                "symfony/finder": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Suomato\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toni Suomalainen",
+                    "email": "toni.suomalainen@gmail.com"
+                }
+            ],
+            "description": "Command-line interface for Base Camp theme",
+            "support": {
+                "source": "https://github.com/suomato/luna/tree/master",
+                "issues": "https://github.com/suomato/luna/issues"
+            },
+            "time": "2017-09-02 19:30:20"
         },
         {
             "name": "symfony/console",
@@ -608,7 +653,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wordpress-l18n-tool": 20
+        "wordpress-l18n-tool": 20,
+        "suomato/luna": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
