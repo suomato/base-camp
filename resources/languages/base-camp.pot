@@ -1,0 +1,117 @@
+# Copyright (C) 2017 Toni Suomalainen
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: Base camp 1.0.0-beta.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/base-camp\n"
+"POT-Creation-Date: 2017-09-07 20:51:53+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: app/config/wp/menus.php:8
+msgid "Main menu"
+msgstr ""
+
+#: app/config/wp/sidebars.php:6
+msgid "Main Sidebar"
+msgstr ""
+
+#: app/config/wp/sidebars.php:8
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: resources/languages/strings.php:8
+msgid "404 - Page not found."
+msgstr ""
+
+#: resources/languages/strings.php:9
+msgid "The page you have looked for does not exist."
+msgstr ""
+
+#: resources/languages/strings.php:10
+msgid "Back to home page"
+msgstr ""
+
+#: resources/languages/strings.php:15 resources/languages/strings.php:57
+msgid "Edit"
+msgstr ""
+
+#: resources/languages/strings.php:20
+msgid "Sorry, no content"
+msgstr ""
+
+#: resources/languages/strings.php:25
+msgid "Name"
+msgstr ""
+
+#: resources/languages/strings.php:26
+msgid "Email"
+msgstr ""
+
+#: resources/languages/strings.php:27
+msgid "Website"
+msgstr ""
+
+#: resources/languages/strings.php:28
+msgid "Comment"
+msgstr ""
+
+#: resources/languages/strings.php:29
+msgid "Enter your comment here..."
+msgstr ""
+
+#: resources/languages/strings.php:30
+msgid "Post Comment"
+msgstr ""
+
+#: resources/languages/strings.php:31
+msgid "Reset"
+msgstr ""
+
+#: resources/languages/strings.php:36
+msgid "Reply"
+msgstr ""
+
+#: resources/languages/strings.php:41
+msgid "Sorry, No Results. Try your search again."
+msgstr ""
+
+#: resources/languages/strings.php:46
+msgid "Search"
+msgstr ""
+
+#: resources/languages/strings.php:51
+msgid "Password"
+msgstr ""
+
+#: resources/languages/strings.php:52
+msgid "Submit"
+msgstr ""
+
+#: resources/languages/strings.php:58
+msgid "Comments"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Base camp"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/suomato/base-camp"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "WordPress starter theme for developer based on Timber-library."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Toni Suomalainen"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/suomato"
+msgstr ""

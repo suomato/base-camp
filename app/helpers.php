@@ -5,6 +5,8 @@
  *
  * Dumps the variable and ends the execution of the app
  *
+ * @since 1.0.0
+ *
  * @param $data
  */
 function dd($data)
@@ -14,6 +16,8 @@ function dd($data)
 
 /**
  * Return url of compiled style or script file
+ *
+ * @since 1.0.0
  *
  * @param $key
  *

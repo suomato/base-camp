@@ -10,7 +10,7 @@
     </h5>
     {% if post.can_edit %}
       <div class="edit-post-link"><a href="{{ post.get_edit_url }}">
-          <i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit</span></a>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <span>{{ messages.single.edit }}</span></a>
       </div>
     {% endif %}
     <p>
@@ -23,7 +23,7 @@
   <section class="comment-box">
     <div class="comments">
       {% if post.comments is not empty %}
-        <h3 class="title is-3">Comments</h3>
+        <h3 class="title is-3">{{ messages.single.comments }}</h3>
         {% for comment in post.comments %}
           {% include "comment.twig" %}
         {% endfor %}

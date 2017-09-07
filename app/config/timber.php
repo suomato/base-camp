@@ -49,6 +49,8 @@ function add_to_context($data)
     // Add main-sidebar to Timber context object
     $data['main_sidebar'] = Timber::get_widgets('main-sidebar');
 
+    $data['messages'] = get_template_messages();
+
     // Extend TimberSite object
     $data['site'] = new BaseCampSite();
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "132d5e58d5a49122821424498a466b0e",
+    "content-hash": "cc9dd764b2ba1f7f48b4e6c975bcf262",
     "packages": [
         {
             "name": "composer/installers",
@@ -259,19 +259,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/suomato/luna.git",
-                "reference": "90683dd206ec129ca3d2dc6f62546aeb0032908e"
+                "reference": "6a1533b2d6f8944084db6801ed0409d26afa0810"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suomato/luna/zipball/90683dd206ec129ca3d2dc6f62546aeb0032908e",
-                "reference": "90683dd206ec129ca3d2dc6f62546aeb0032908e",
+                "url": "https://api.github.com/repos/suomato/luna/zipball/6a1533b2d6f8944084db6801ed0409d26afa0810",
+                "reference": "6a1533b2d6f8944084db6801ed0409d26afa0810",
                 "shasum": ""
             },
             "require": {
                 "league/flysystem": "^1.0",
                 "php": "^7.0",
-                "symfony/console": "^3.3",
-                "symfony/finder": "^3.3"
+                "symfony/console": "^3.3"
             },
             "type": "library",
             "autoload": {
@@ -296,7 +295,7 @@
                 "source": "https://github.com/suomato/luna/tree/master",
                 "issues": "https://github.com/suomato/luna/issues"
             },
-            "time": "2017-09-02 19:30:20"
+            "time": "2017-09-03T08:45:16+00:00"
         },
         {
             "name": "symfony/console",
@@ -599,16 +598,6 @@
             "time": "2017-08-27T14:52:21+00:00"
         },
         {
-            "name": "wordpress-l18n-tool",
-            "version": "@dev",
-            "source": {
-                "type": "svn",
-                "url": "https://develop.svn.wordpress.org/",
-                "reference": "trunk"
-            },
-            "type": "library"
-        },
-        {
             "name": "wpackagist-plugin/advanced-custom-fields",
             "version": "4.4.11",
             "source": {
@@ -653,7 +642,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wordpress-l18n-tool": 20,
         "suomato/luna": 20
     },
     "prefer-stable": false,

@@ -8,7 +8,7 @@
       <hr/>
     {% endfor %}
   {% else %}
-    <h1 class="title is-2">Sorry, No Results. Try your search again.</h1>
+    <h1 class="title is-2">{{ messages.search.no_results }}</h1>
     {% include 'searchform.twig' %}
   {% endif %}
 {% endblock %}

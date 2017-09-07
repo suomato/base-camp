@@ -10,7 +10,7 @@
         <a href="{{ post.author.link }}"><i class="fa fa-user" aria-hidden="true"></i> <span>{{ post.author }}</span></a>
       </div>
       {% if post.can_edit %}
-        <div><a href="{{ post.get_edit_url }}"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Edit</span></a></div>
+        <div><a href="{{ post.get_edit_url }}"><i class="fa fa-pencil" aria-hidden="true"></i> <span>{{ messages.article.edit }}</span></a></div>
       {% endif %}
     </div>
   </header>

@@ -25,18 +25,6 @@
       "url": "https://wpackagist.org"
     },
     {
-      "type": "package",
-      "package": {
-        "name": "wordpress-l18n-tool",
-        "version": "@dev",
-        "source": {
-          "url": "https://develop.svn.wordpress.org/",
-          "type": "svn",
-          "reference": "trunk"
-        }
-      }
-    },
-    {
       "type": "vcs",
       "url": "https://github.com/suomato/luna"
     }
@@ -58,12 +46,12 @@
     "symfony/console": "^3.3",
     "league/flysystem": "^1.0",
     "symfony/finder": "^3.3",
-    "wordpress-l18n-tool": "@dev",
     "suomato/luna": "dev-master"
   },
   "autoload": {
     "files": [
-      "app/helpers.php"
+      "app/helpers.php",
+      "resources/languages/messages.php"
     ],
     "classmap": [
       "app/"
