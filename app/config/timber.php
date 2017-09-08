@@ -49,6 +49,7 @@ function add_to_context($data)
     // Add main-sidebar to Timber context object
     $data['main_sidebar'] = Timber::get_widgets('main-sidebar');
 
+    // Add Locale strings to Timber context object
     $data['messages'] = get_template_messages();
 
     // Extend TimberSite object
