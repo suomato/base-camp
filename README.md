@@ -1,5 +1,10 @@
 <p align="center"><img width="220" src="https://raw.githubusercontent.com/suomato/base-camp/develop/resources/assets/images/base-camp-logo.png"></p>
 
+<p align="center">
+<a href='https://www.versioneye.com/user/projects/59b44966368b08003d0e8529'><img src='https://www.versioneye.com/user/projects/59b44966368b08003d0e8529/badge.svg?style=flat-square' alt="Dependency Status" /></a>
+<a href="https://packagist.org/packages/suomato/base-camp"><img src="https://poser.pugx.org/suomato/base-camp/license.svg" alt="License"></a>
+</p>
+
 ## About Base Camp
 
 > Awesome WordPress starter theme for developers based on modern web technologies. **Base Camp 1.0.0-beta.1 is available.**
