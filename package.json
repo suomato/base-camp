@@ -27,7 +27,7 @@
     "purifycss-webpack": "^0.7.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "vue-loader": "^12.1.0",
+    "vue-loader": "^13.0.4",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^3.4.1",
     "webpack-manifest-plugin": "^1.2.1"
