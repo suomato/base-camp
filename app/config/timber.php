@@ -75,6 +75,8 @@ function add_to_context($data)
     // Add Locale strings to Timber context object
     $data['messages'] = get_template_messages();
 
+    $data['logo'] = get_stylesheet_directory_uri() . '/resources/assets/images/base-camp-logo.png';
+
     // Extend TimberSite object
     $data['site'] = new BaseCampSite();
 
