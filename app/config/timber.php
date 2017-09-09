@@ -22,6 +22,29 @@ if ( ! class_exists('Timber')) {
 
 /*
 |--------------------------------------------------------------------------
+| Pagination mid size
+|--------------------------------------------------------------------------
+|
+| Here you can define that how many pagination items there are before and after current
+| pagination item in pagination list. First and last item are always visible.
+|
+| For example:
+| $pagination_mid_size = 1 => 1 ... 5 [6] 7 ... 11
+| $pagination_mid_size = 2 => 1 ... 4 5 [6] 7 8 ... 11
+| $pagination_mid_size = 3 => 1 ... 3 4 5 [6] 7 8 9 ... 11
+| $pagination_mid_size = 3 => 1 2 3 4 [5] 6 7 8 ... 11
+|
+| Supported Mid size value: 1 - n
+|
+*/
+
+$pagination_mid_size = 2;
+
+$pagination_mid_size += 2; // DON'T TOUCH
+
+
+/*
+|--------------------------------------------------------------------------
 | Template paths
 |--------------------------------------------------------------------------
 |
