@@ -90,4 +90,4 @@ The new file is created to `/app/config/wp/custom-post-types/{name}.php`
 php luna make:route {name}
 ```
 
-> The new file is created to `/app/config/wp/routes/{name}.php`. The created file comes with the nice documented boilerplate.
+> The new file is created to `/app/config/wp/routes/{name}.php`. The created file comes with the well documented boilerplate.
