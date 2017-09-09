@@ -37,11 +37,8 @@
 ```
 base-camp/                                          # Theme root
 ├── app/                                            # Theme logic
-│   ├── commands/                                   # Theme CLI(Luna) commands
 │   ├── config/                                     # Theme config
 │   │   ├── wp/                                     # WordPress specific config
-│   │   │   ├── custom-post-types/                  # Location of generated Custom Post Type
-│   │   │   │   └── _custom-post-type-template.php  # Custom Post Type template (DON'T REMOVE THIS)
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
 │   │   │   ├── sidebars.php                        # Register here WordPress sidebars
@@ -55,12 +52,15 @@ base-camp/                                          # Theme root
 │   ├── assets/                                     # Front-end assets
 │   │   ├── js/                                     # Javascripts
 │   │   │   └── components/                         # Vue Components
-│   │   ├── sass/                                   # styles
-│   │   │   └── components/                         # partials
+│   │   ├── sass/                                   # Styles
+│   │   │   └── components/                         # Partials
+│   ├── languages/                                  # Language features
+│   │   ├── base-camp.pot                           # Template for translation 
+│   │   └── messages.php                            # Language strings 
 │   ├── views/                                      # Theme Twig files
-│   │   ├── components/                             # partials
-│   │   ├── footer/                                 # theme footer templates
-│   │   └── header/                                 # theme header templates
+│   │   ├── components/                             # Partials
+│   │   ├── footer/                                 # Theme footer templates
+│   │   └── header/                                 # Theme header templates
 ```
 
 ## Luna (Command-line interface)
