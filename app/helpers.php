@@ -5,6 +5,8 @@
  *
  * Dumps the variable and ends the execution of the app
  *
+ * @since 1.0.0
+ *
  * @param $data
  */
 function dd($data)
@@ -14,6 +16,8 @@ function dd($data)
 
 /**
  * Return url of compiled style or script file
+ *
+ * @since 1.0.0
  *
  * @param $key
  *
@@ -25,17 +29,4 @@ function assets($key)
     $manifest_array  = json_decode($manifest_string, true);
 
     return get_stylesheet_directory_uri() . "/static/" . $manifest_array[$key];
-}
-
-function build_custom_post_type($template, $name, $plural)
-{
-    $singular = $name;
-    $plural   = $plural ?? "{$name}s";
-
-    $content = str_replace('movies', $plural, $template);
-    $content = str_replace('Movies', ucfirst($plural), $content);
-    $content = str_replace('Movie', ucfirst($singular), $content);
-    $content = str_replace('movie', $singular, $content);
-
-    return $content;
 }

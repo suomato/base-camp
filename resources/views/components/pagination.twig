@@ -1,0 +1,36 @@
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+  {# PREVIOUS BUTTON #}
+  {% if pagination.prev %}
+    <a href="{{ pagination.prev.link }}"
+       class="pagination-previous prev {{ pagination.prev.link|length ? '' : 'invisible' }}">&laquo;</a>
+  {% else %}
+    <button class="pagination-previous prev" disabled>&laquo;</button>
+  {% endif %}
+
+  {# NEXT BUTTON #}
+  {% if pagination.next %}
+    <a href="{{ pagination.next.link }}"
+       class="pagination-next next {{ pagination.next.link|length ? '' : 'invisible' }}">&raquo;</a>
+  {% else %}
+    <button class="pagination-next next" disabled>&raquo;</button>
+  {% endif %}
+
+  {# PAGINATION LIST #}
+  <ul class="pagination-list">
+    {% for page in pagination.pages %}
+      {% if page.link %}
+        <li>
+          <a href="{{ page.link }}" class="{{ page.class }} pagination-link"
+             aria-label="Goto page {{ page.title }}">{{ page.title }}</a>
+        </li>
+      {% else %}
+        {% if page.class == 'dots' %}
+          <li><span class="pagination-ellipsis">&hellip;</span></li>
+        {% else %}
+          <span class="pagination-link is-current {{ page.class }}">{{ page.title }}</span>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

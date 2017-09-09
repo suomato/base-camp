@@ -37,11 +37,8 @@
 ```
 base-camp/                                          # Theme root
 ├── app/                                            # Theme logic
-│   ├── commands/                                   # Theme CLI(Luna) commands
 │   ├── config/                                     # Theme config
 │   │   ├── wp/                                     # WordPress specific config
-│   │   │   ├── custom-post-types/                  # Location of generated Custom Post Type
-│   │   │   │   └── _custom-post-type-template.php  # Custom Post Type template (DON'T REMOVE THIS)
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
 │   │   │   ├── sidebars.php                        # Register here WordPress sidebars
@@ -55,16 +52,22 @@ base-camp/                                          # Theme root
 │   ├── assets/                                     # Front-end assets
 │   │   ├── js/                                     # Javascripts
 │   │   │   └── components/                         # Vue Components
-│   │   ├── sass/                                   # styles
-│   │   │   └── components/                         # partials
+│   │   ├── sass/                                   # Styles
+│   │   │   └── components/                         # Partials
+│   ├── languages/                                  # Language features
+│   │   ├── base-camp.pot                           # Template for translation 
+│   │   └── messages.php                            # Language strings 
 │   ├── views/                                      # Theme Twig files
-│   │   ├── components/                             # partials
-│   │   ├── footer/                                 # theme footer templates
-│   │   └── header/                                 # theme header templates
+│   │   ├── components/                             # Partials
+│   │   ├── footer/                                 # Theme footer templates
+│   │   └── header/                                 # Theme header templates
 ```
 
 ## Luna (Command-line interface)
-> Luna has only one command at the moment. The Command helps you to create a Custom Post Type very fast.
+
+#### Make Custom Post Type
+
+> This Command helps you to create a Custom Post Type very fast.
 
 ```
 php luna make:custom-post-type {name}
@@ -78,3 +81,13 @@ php luna make:custom-post-type person --plural=people
 ```
 
 The new file is created to `/app/config/wp/custom-post-types/{name}.php`
+
+#### Make Route
+
+> This Command helps you to create a route for WordPress API clearer and faster way.
+
+```
+php luna make:route {name}
+```
+
+> The new file is created to `/app/config/wp/routes/{name}.php`. The created file comes with the well documented boilerplate.

@@ -1,6 +1,7 @@
 <?php
 
-$context          = Timber::get_context();
-$context['posts'] = Timber::get_posts(['posts_per_page' => -1]);
+$context               = Timber::get_context();
+$context['posts']      = new Timber\PostQuery();
+$context['pagination'] = Timber::get_pagination($pagination_mid_size);
 
 Timber::render('index.twig', $context);

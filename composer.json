@@ -23,8 +23,13 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/suomato/luna"
     }
   ],
+
   "extra": {
     "installer-paths": {
       "../../plugins/{$name}/": [
@@ -40,11 +45,13 @@
     "symfony/var-dumper": "^3.3",
     "symfony/console": "^3.3",
     "league/flysystem": "^1.0",
-    "symfony/finder": "^3.3"
+    "symfony/finder": "^3.3",
+    "suomato/luna": "dev-master"
   },
   "autoload": {
     "files": [
-      "app/helpers.php"
+      "app/helpers.php",
+      "resources/languages/messages.php"
     ],
     "classmap": [
       "app/"

@@ -2,7 +2,7 @@
 
 {% block content %}
   <h1 class="title is-2">
-    404 - Page not found.
+   {{ messages.404.title }}
   </h1>
-  <p>The page you have looked for does not exist. Back to <a href="{{ site.link }}">home page</a>.</p>
+  <p>{{ messages.404.body }} <a href="{{ site.link }}">{{ messages.404.link_text }}</a>.</p>
 {% endblock %}

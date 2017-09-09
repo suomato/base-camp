@@ -8,7 +8,7 @@
 
       {# Name input field #}
       <div class="field">
-        <label class="label" for="author">Name <span class="required">*</span></label>
+        <label class="label" for="author">{{ messages.comment_form.name }} <span class="required">*</span></label>
         <div class="control has-icons-left">
           <input class="input" type="text" id="author" name="author" required>
           <span class="icon is-small is-left">
@@ -19,7 +19,7 @@
 
       {# Email input field #}
       <div class="field">
-        <label class="label" for="email">Email <span class="required">*</span></label>
+        <label class="label" for="email">{{ messages.comment_form.email }} <span class="required">*</span></label>
         <div class="control has-icons-left">
           <input class="input" type="email" id="email" name="email" required>
           <span class="icon is-small is-left">
@@ -30,7 +30,7 @@
 
       {# Website input field #}
       <div class="field">
-        <label class="label" for="url">Website</label>
+        <label class="label" for="url">{{ messages.comment_form.website }}</label>
         <div class="control has-icons-left">
           <input class="input" type="text" id="url" name="url">
           <span class="icon is-small is-left">
@@ -42,9 +42,13 @@
 
     {# Comment input field #}
     <div class="field">
-      <label class="label" for="comment">Comment</label>
+      <label class="label" for="comment">{{ messages.comment_form.comment }}</label>
       <div class="control">
-        <textarea class="textarea" id="comment" name="comment" placeholder="Enter your comment here..."></textarea>
+        <textarea
+          class="textarea"
+          id="comment"
+          name="comment"
+          placeholder="{{messages.comment_form.comment_placeholder }}"></textarea>
       </div>
     </div>
 
@@ -54,10 +58,10 @@
     {# Form Buttons #}
     <div class="field is-grouped">
       <p class="control">
-        <input type="submit" name="Submit" class="button is-primary" value="Post Comment"/>
+        <input type="submit" name="Submit" class="button is-primary" value="{{ messages.comment_form.post_comment }}"/>
       </p>
       <p class="control">
-        <input type="reset" class="button is-light" value="Reset"/>
+        <input type="reset" class="button is-light" value="{{ messages.comment_form.reset }}"/>
       </p>
       <p class="control">
         {{ cancel_link }}
