@@ -1,3 +1,5 @@
+<p align="center"><img src="https://raw.githubusercontent.com/suomato/base-camp/develop/resources/assets/images/base-camp-logo.png"></p>
+
 # Base Camp
 
 > Awesome WordPress starter theme for developers based on modern web technologies. **Base Camp 1.0.0-beta.1 is available.**
