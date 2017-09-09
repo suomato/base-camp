@@ -64,7 +64,10 @@ base-camp/                                          # Theme root
 ```
 
 ## Luna (Command-line interface)
-> Luna has only one command at the moment. The Command helps you to create a Custom Post Type very fast.
+
+#### Make Custom Post Type
+
+> This Command helps you to create a Custom Post Type very fast.
 
 ```
 php luna make:custom-post-type {name}
@@ -78,3 +81,13 @@ php luna make:custom-post-type person --plural=people
 ```
 
 The new file is created to `/app/config/wp/custom-post-types/{name}.php`
+
+#### Make Route
+
+> This Command helps you to create a route for WordPress API clearer and faster way.
+
+```
+php luna make:route {name}
+```
+
+> The new file is created to `/app/config/wp/routes/{name}.php`. The created file comes with the nice documented boilerplate.
