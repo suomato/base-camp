@@ -31,9 +31,8 @@
 * [Nodejs](https://nodejs.org/en/) >= v6.11.2
 
 ## Installation
-* Go your themes folder and clone this repo: `git clone git@github.com:suomato/base-camp.git`
+* Go your themes folder and run`composer create-project suomato/base-camp`
 * `cd base-camp`
-* `composer install`
 * `yarn` **or** `npm install`
 * define your dev-server url to `webpack.config.js` file
 * `yarn watch` **or** `npm run watch`
@@ -61,8 +60,8 @@ base-camp/                                          # Theme root
 │   │   ├── sass/                                   # Styles
 │   │   │   └── components/                         # Partials
 │   ├── languages/                                  # Language features
-│   │   ├── base-camp.pot                           # Template for translation 
-│   │   └── messages.php                            # Language strings 
+│   │   ├── base-camp.pot                           # Template for translation
+│   │   └── messages.php                            # Language strings
 │   ├── views/                                      # Theme Twig files
 │   │   ├── components/                             # Partials
 │   │   ├── footer/                                 # Theme footer templates
