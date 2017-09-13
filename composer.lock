@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ef52c7de534c8fe6c758af0a7ef9890",
+    "content-hash": "b07074be3477db5f89dea4f3bd81be68",
     "packages": [
         {
             "name": "composer/installers",
@@ -255,16 +255,16 @@
         },
         {
             "name": "suomato/luna",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suomato/luna.git",
-                "reference": "6a1533b2d6f8944084db6801ed0409d26afa0810"
+                "reference": "da1c2d25cfc464d449e35d387b64793f5361c8d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suomato/luna/zipball/6a1533b2d6f8944084db6801ed0409d26afa0810",
-                "reference": "6a1533b2d6f8944084db6801ed0409d26afa0810",
+                "url": "https://api.github.com/repos/suomato/luna/zipball/da1c2d25cfc464d449e35d387b64793f5361c8d7",
+                "reference": "da1c2d25cfc464d449e35d387b64793f5361c8d7",
                 "shasum": ""
             },
             "require": {
@@ -281,6 +281,7 @@
                     "Suomato\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -291,11 +292,7 @@
                 }
             ],
             "description": "Command-line interface for Base Camp theme",
-            "support": {
-                "source": "https://github.com/suomato/luna/tree/master",
-                "issues": "https://github.com/suomato/luna/issues"
-            },
-            "time": "2017-09-03T08:45:16+00:00"
+            "time": "2017-09-13T11:34:38+00:00"
         },
         {
             "name": "symfony/console",
@@ -621,9 +618,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "suomato/luna": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -5,7 +5,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Suomato\Luna;
-$app = new Application('Luna 0.1.0');
+
+$app = new Application('Luna ' . Luna::$version);
 
 $app->addCommands(Luna::commands());
 
