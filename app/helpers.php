@@ -25,7 +25,7 @@ function dd($data)
  */
 function assets($key)
 {
-    $manifest_string = file_get_contents(get_stylesheet_directory_uri() . "/static/manifest.json");
+    $manifest_string = file_get_contents(get_template_directory() . "/static/manifest.json");
     $manifest_array  = json_decode($manifest_string, true);
 
     return get_stylesheet_directory_uri() . "/static/" . $manifest_array[$key];
