@@ -25,3 +25,18 @@ function base_camp_scripts_and_styles()
 }
 
 add_action('wp_enqueue_scripts', 'base_camp_scripts_and_styles', 999);
+
+
+/**
+ * Register Login Page scripts and styles and enqueue them
+ */
+function base_camp_login_scripts_and_styles()
+{
+    // Register styles
+    wp_register_style('base-camp-login-styles', assets('login.css'), [], '', 'all');
+
+    // Enqueue scripts and styles
+    wp_enqueue_style('base-camp-login-styles');
+}
+
+add_action('login_enqueue_scripts', 'base_camp_login_scripts_and_styles', 999);

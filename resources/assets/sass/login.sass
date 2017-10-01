@@ -1,0 +1,52 @@
+@import 'variables'
+
+// ******************************************************
+// Here you can define your own custom login style sheet.
+// ******************************************************
+
+body.login
+  div#login
+    h1
+      a
+        // Login Page logo
+        background: url('#{$images}/base-camp-logo.png') no-repeat center bottom
+        -webkit-background-size: 84px
+        background-size: 100%
+        color: #444
+        height: 120px
+        font-size: 20px
+        font-weight: 400
+        line-height: 1.3em
+        margin: 0 auto 25px
+        padding: 0
+        text-decoration: none
+        width: 60%
+        text-indent: -9999px
+        outline: none
+        overflow: hidden
+        display: block
+
+  form#loginform
+    p
+      &.submit
+        input#wp-submit
+          // Submit button
+          background: $primary
+          border-color: darken($primary, 5%) darken($primary, 10%) darken($primary, 10%)
+          -webkit-box-shadow: 0 1px 0 darken($primary, 10%)
+          box-shadow: 0 1px 0 darken($primary, 10%)
+          color: #fff
+          text-decoration: none
+          text-shadow: 0 -1px 1px darken($primary, 10%), 1px 0 1px darken($primary, 10%), 0 1px 1px darken($primary, 10%), -1px 0 1px darken($primary, 10%)
+
+
+// Form input and checkbox
+input[type="checkbox"],
+input[type="text"],
+input[type="password"]
+  &:focus
+    border-color: $primary
+    -webkit-box-shadow: 0 0 2px darken($primary, 10%)
+    box-shadow: 0 0 2px darken($primary, 10%)
+  &:checked:before
+    color: $primary
