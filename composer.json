@@ -34,7 +34,7 @@
   },
   "require": {
     "php": "^7.0",
-    "wpackagist-plugin/timber-library": "1.4.1",
+    "wpackagist-plugin/timber-library": "1.5.0",
     "symfony/var-dumper": "^3.3",
     "symfony/console": "^3.3",
     "league/flysystem": "^1.0",
