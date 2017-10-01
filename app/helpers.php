@@ -25,8 +25,22 @@ function dd($data)
  */
 function assets($key)
 {
-    $manifest_string = file_get_contents(get_template_directory() . "/static/manifest.json");
+    $manifest_string = file_get_contents(get_template_directory() . '/static/manifest.json');
     $manifest_array  = json_decode($manifest_string, true);
 
-    return get_stylesheet_directory_uri() . "/static/" . $manifest_array[$key];
+    return get_stylesheet_directory_uri() . '/static/' . $manifest_array[$key];
+}
+
+/**
+ * Returns the fully qualified path to the images directory.
+ *
+ * @since 1.1.0
+ *
+ * @param null $file
+ *
+ * @return string
+ */
+function images_path($file = null)
+{
+    return get_stylesheet_directory_uri() . '/resources/assets/images/' . $file;
 }
