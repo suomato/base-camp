@@ -1,6 +1,4 @@
-# Release Notes
-
-## v1.1.0 (2017-10-01)
+## **v1.1.0 (2017-10-01)**
 
 ### Added
 * Login page config to `app/config/wp/login-page.php`
