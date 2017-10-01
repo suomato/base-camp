@@ -21,7 +21,7 @@
   * Split javascript code to two chunks, app.js and vendor.js
   * [Vuejs](https://vuejs.org/) for boosting frontend development
   * [BrowserSync](https://www.browsersync.io/) for synchronised browser testing
-* Luna (Command-line interface included with Base Camp)
+* [Luna](https://github.com/suomato/base-camp#luna-command-line-interface) (Command-line interface included with Base Camp)
 
 ## Requirements
 * [Wordpress](https://wordpress.org/) >= v4.8.2
