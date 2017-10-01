@@ -6,7 +6,7 @@
 
 ## About Base Camp
 
-> Awesome WordPress starter theme for developers based on modern web technologies. **Base Camp 1.0.0 is available.**
+> Awesome WordPress starter theme for developers based on modern web technologies.
 
 ## Features
 * [Bulma](http://bulma.io/) (Responsive CSS framework based on Flexbox)
@@ -24,11 +24,11 @@
 * Luna (Command-line interface included with Base Camp)
 
 ## Requirements
-* [Wordpress](https://wordpress.org/) >= v4.8.0
-* [Composer](https://getcomposer.org/download/) >= v1.4.2
-* [PHP](http://php.net/manual/en/install.php) >=v7.0
-* [Yarn](https://yarnpkg.com/en/) >= v0.27.5 **or** [npm](https://www.npmjs.com/) >= v5.3.0
-* [Nodejs](https://nodejs.org/en/) >= v6.11.2
+* [Wordpress](https://wordpress.org/) >= v4.8.2
+* [Composer](https://getcomposer.org/download/) >= v1.5.1
+* [PHP](http://php.net/manual/en/install.php) >= v7.0
+* [Yarn](https://yarnpkg.com/en/) >= v1.0.0 **or** [npm](https://www.npmjs.com/) >= v5.4.0
+* [Nodejs](https://nodejs.org/en/) >= v6.11.3
 
 ## Installation
 * Go your themes folder and run`composer create-project suomato/base-camp`
@@ -44,6 +44,7 @@ base-camp/                                          # Theme root
 ├── app/                                            # Theme logic
 │   ├── config/                                     # Theme config
 │   │   ├── wp/                                     # WordPress specific config
+│   │   │   ├── login-page.php                      # Register here WordPress Login Page config
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
 │   │   │   ├── sidebars.php                        # Register here WordPress sidebars
