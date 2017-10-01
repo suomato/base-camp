@@ -1,21 +1,23 @@
-var webpack = require('webpack')
-var path = require('path')
-var glob = require('glob')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var PurifyCSSPlugin = require('purifycss-webpack')
-var CleanWebpackPlugin = require('clean-webpack-plugin')
-var ManifestPlugin = require('webpack-manifest-plugin')
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-var inProduction = process.env.NODE_ENV === 'production'
+var webpack = require('webpack');
+var path = require('path');
+var glob = require('glob');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var inProduction = process.env.NODE_ENV === 'production';
+var styleHash = inProduction ? 'contenthash' : 'hash';
+var scriptHash = inProduction ? 'chunkhash' : 'hash';
 
 module.exports = {
   entry: {
     app: glob.sync('./resources/assets/+(s[ac]ss|js)/main.+(s[ac]ss|js)'),
+    login: glob.sync('./resources/assets/+(s[ac]ss|js)/login.+(s[ac]ss|js)'),
     vendor: ['jquery', 'vue'],
   },
   output: {
     path: path.resolve(__dirname, './static/'),
-    filename: 'js/[name].[chunkhash].js',
+    filename: `js/[name].[${scriptHash}].js`,
   },
 
   module: {
@@ -42,9 +44,12 @@ module.exports = {
           use: [
             {
               loader: 'css-loader',
-              options: {minimize: inProduction},
+              options: { minimize: inProduction },
             },
-            'sass-loader',
+            {
+              loader: 'sass-loader',
+              options: { sourceMap: true, },
+            },
           ],
         }),
       },
@@ -52,6 +57,20 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+              publicPath: '../',
+            },
+          },
+          'image-webpack-loader',
+        ],
       },
     ],
   },
@@ -63,7 +82,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('css/[name].[contenthash].css'),
+    new ExtractTextPlugin(`css/[name].[${styleHash}].css`),
 
     new BrowserSyncPlugin({
       host: 'localhost',
@@ -76,21 +95,17 @@ module.exports = {
       ],
     }),
 
-    // ************
-    // Breaks Bulma
-    //*************
-    // new PurifyCSSPlugin({
-    //   paths: glob.sync(path.join(__dirname, 'resources/views/**/*.twig')),
-    //   minimize: inProduction
-    // }),
-    new CleanWebpackPlugin(['static']),
+    new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
+      watch: true,
+    }),
+
     new ManifestPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'js/[name].[chunkhash].js',
+      filename: `js/[name].[${scriptHash}].js`,
     }),
   ],
-}
+};
 
 if (inProduction) {
   module.exports.plugins.push(
