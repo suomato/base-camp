@@ -44,6 +44,7 @@ base-camp/                                          # Theme root
 ├── app/                                            # Theme logic
 │   ├── config/                                     # Theme config
 │   │   ├── wp/                                     # WordPress specific config
+│   │   │   ├── admin-page.php                      # Register here WordPress Admin Page config
 │   │   │   ├── login-page.php                      # Register here WordPress Login Page config
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
