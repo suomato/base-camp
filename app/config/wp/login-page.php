@@ -23,3 +23,10 @@ function base_camp_login_logo_title()
 }
 
 add_filter('login_headertitle', 'base_camp_login_logo_title');
+
+/**
+ * Add favicon to Login Page
+ */
+add_action('login_head', function () {
+    echo '<link rel="shortcut icon" href="' . images_path('favicon.png') . '" />';
+});
