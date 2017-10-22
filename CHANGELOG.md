@@ -1,3 +1,18 @@
+## **v1.2.0 (2017-10-22)**
+
+### Added
+* Third menu level (Wordpress Main menu supports third menu level)
+* Favicon to admin page and login page
+
+### Changed
+* Refactored Navbar component
+* Refactored `_variables.sass` file
+ 
+### Fixed
+* Pagination border-color
+
+---
+
 ## **v1.1.0 (2017-10-01)**
 
 ### Added

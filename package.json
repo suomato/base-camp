@@ -1,6 +1,6 @@
 {
   "name": "base-camp",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "WordPress starter theme for developer based on Timber-library",
   "main": "index.js",
   "scripts": {
