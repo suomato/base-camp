@@ -1,2 +1,44 @@
-.navbar-brand
-  align-items: center
+nav.navbar
+  .navbar-brand
+    align-items: center
+
+  +desktop
+    .second-level
+      li
+        position: relative
+
+        a.has-children::after
+          +arrow($link)
+          margin-top: -0.375em
+          right: 1.125em
+          top: 50%
+          transform: rotate(-135deg)
+          font-size: 85%
+        &:hover
+          .third-level
+            display: block!important
+
+        .third-level
+          left: 100%
+          top: -6px
+          display: none!important
+          border-top-right-radius: 5px
+
+  +touch
+    ul.navbar-item
+      padding-bottom: 1rem
+
+    .navbar-dropdown
+      padding: 0
+
+    .second-level
+      a
+        padding-left: 2rem
+        padding-right: 2rem
+
+      .third-level
+        padding: 0
+        a
+          padding-left: 3rem
+          font-size: 95%
+

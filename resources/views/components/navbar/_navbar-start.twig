@@ -1,0 +1,40 @@
+<div class="navbar-start">
+  {% for item in menu.get_items %}
+    {% if item.get_children %}
+
+      <ul class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          {{ item.title }}
+        </a>
+
+        {# Second level menu #}
+        <ul class="navbar-dropdown is-hover second-level">
+          {% for child in item.get_children %}
+            <li class="">
+              <a class="navbar-item {{ child.get_children ? 'has-children' }}" href="{{ child.link }}">
+                {{ child.title }}
+              </a>
+              {% if child.get_children %}
+
+                {# Third level menu #}
+                <div class="navbar-dropdown third-level">
+                  {% for grandchild in child.get_children %}
+                    <a class="navbar-item" href="{{ child.link }}">
+                      {{ grandchild.title }}
+                    </a>
+                  {% endfor %}
+                </div>
+
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+
+      </ul>
+    {% else %}
+      <a class="navbar-item" href="{{ item.link }}">
+        {{ item.title }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
