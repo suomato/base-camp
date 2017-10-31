@@ -45,6 +45,7 @@ base-camp/                                          # Theme root
 │   ├── config/                                     # Theme config
 │   │   ├── wp/                                     # WordPress specific config
 │   │   │   ├── admin-page.php                      # Register here WordPress Admin Page config
+│   │   │   ├── image-sizes.php                     # Register here WordPress Custom image sizes
 │   │   │   ├── login-page.php                      # Register here WordPress Login Page config
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
