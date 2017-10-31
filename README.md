@@ -87,7 +87,7 @@ exception can be defined by plural option e.g.
 php luna make:custom-post-type person --plural=people
 ```
 
-The new file is created to `/app/config/wp/custom-post-types/{name}.php`
+> The new file is created to `/app/config/wp/custom-post-types/{name}.php`
 
 #### Make Route
 
