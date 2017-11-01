@@ -49,6 +49,7 @@ base-camp/                                          # Theme root
 │   │   │   ├── login-page.php                      # Register here WordPress Login Page config
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
+│   │   │   ├── security.php                        # Things that increase the site security 
 │   │   │   ├── sidebars.php                        # Register here WordPress sidebars
 │   │   │   └── theme-supports.php                  # Register here WordPress theme features
 │   │   ├── autoload.php                            # Includes all config files (DON'T REMOVE THIS)
