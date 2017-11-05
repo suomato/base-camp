@@ -13,7 +13,7 @@ add_image_size('square', 400, 400, true);
 function base_camp_custom_image_sizes($sizes)
 {
     return array_merge($sizes, [
-        'square' => __('Square'),
+        'square' => __('Square', 'base-camp'),
     ]);
 }
 
