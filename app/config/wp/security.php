@@ -53,7 +53,7 @@ add_filter('script_loader_src', 'base_camp_remove_query_string_version', 9999);
 
 function base_camp_custom_login_error_message()
 {
-    return 'Oops! Incorrect input';
+    return __('Oops! Incorrect input', 'base-camp');
 }
 
 add_filter('login_errors', 'base_camp_custom_login_error_message');
