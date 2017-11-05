@@ -1,3 +1,13 @@
+## **v1.3.0 (2017-11-05)**
+
+### Added
+* Custom image size config to `app/config/wp/image-sizes.php`
+* Some security config to `app/config/wp/security.php`
+
+### Changed
+* Luna 1.0.0 -> 1.1.0 (A new command make:shortcode)
+* updated packages
+
 ## **v1.2.0 (2017-10-22)**
 
 ### Added
