@@ -76,7 +76,7 @@ base-camp/                                          # Theme root
 
 #### Make Custom Post Type
 
-> This Command helps you to create a Custom Post Type very fast.
+> This Command helps you to create a new Custom Post Type very fast.
 
 ```
 php luna make:custom-post-type {name}
@@ -93,10 +93,77 @@ php luna make:custom-post-type person --plural=people
 
 #### Make Route
 
-> This Command helps you to create a route for WordPress API clearer and faster way.
+> This Command helps you to create a new route for WordPress API clearer and faster way.
 
 ```
 php luna make:route {name}
 ```
 
 > The new file is created to `/app/config/wp/routes/{name}.php`. The created file comes with the well documented boilerplate.
+
+#### Make Shortcode
+
+> This Command helps you to create a new shortcode with very clean boilerplate. 
+
+```
+php luna make:shortcode {name}
+```
+
+> The new file is created to `/app/config/wp/shortcodes/{name}.php`.
+
+##### Example
+
+Run command:
+
+```
+php luna make:shortcode LuckyNumber
+```
+
+Then define some data
+```
+    /**
+     * @var string Shortcode name
+     */
+    protected $shortcode = 'lucky_number';
+
+    /**
+     * @var array|string An associative array of attributes
+     */
+    protected $attributes = [
+        'number' => 7,
+    ];
+
+    /**
+     * Return template of shortcode
+     *
+     * @param $attr An associative array of attributes
+     * @param $content Enclosed content
+     *
+     * @return mixed
+     */
+    protected function template($attr, $content)
+    {
+        return 'This is my lucky number: ' . $attr['number'];
+    }
+```
+
+> Now shortcode `[lucky_number]` generates `This is my lucky number: 7` and `[lucky_number number="13"]` generates `This is my lucky number: 13`
+
+> It is also possible to use power of Timber. In template function you can return Timber view instead of string like this:
+
+```
+// resources/views/shortcodes/lucky-number.twig
+
+<p>This is my lucky number: {{ number }}</p>
+
+******************************************************************
+
+// app/config/wp/shortcodes/LuckyNumber.php 
+
+protected function template($attr, $content)
+{
+    return \Timber::compile('shortcodes/lucky-number.twig', $attr);
+}
+```
+
+
