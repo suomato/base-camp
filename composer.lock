@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "759f4e8271f190ceece65ade15265b6f",
+    "content-hash": "7ea031461885f35aa11b276189d4a818",
     "packages": [
         {
             "name": "composer/installers",
@@ -255,16 +255,16 @@
         },
         {
             "name": "suomato/luna",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/suomato/luna.git",
-                "reference": "da1c2d25cfc464d449e35d387b64793f5361c8d7"
+                "reference": "dc9197cfe3256d6499898bedfbc3e0148debae27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/suomato/luna/zipball/da1c2d25cfc464d449e35d387b64793f5361c8d7",
-                "reference": "da1c2d25cfc464d449e35d387b64793f5361c8d7",
+                "url": "https://api.github.com/repos/suomato/luna/zipball/dc9197cfe3256d6499898bedfbc3e0148debae27",
+                "reference": "dc9197cfe3256d6499898bedfbc3e0148debae27",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,7 @@
                 }
             ],
             "description": "Command-line interface for Base Camp theme",
-            "time": "2017-09-13T11:34:38+00:00"
+            "time": "2017-11-05T12:50:38+00:00"
         },
         {
             "name": "symfony/console",

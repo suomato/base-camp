@@ -1,6 +1,6 @@
 {
   "name": "suomato/base-camp",
-  "description": "WordPress starter theme for developer based on Timber-library",
+  "description": "Awesome WordPress starter theme for developers based on modern web technologies.",
   "license": "MIT",
   "keywords": [
     "bulma",
@@ -39,7 +39,7 @@
     "symfony/console": "^3.3",
     "league/flysystem": "^1.0",
     "symfony/finder": "^3.3",
-    "suomato/luna": "^1.0"
+    "suomato/luna": "^1.1.0"
   },
   "autoload": {
     "files": [

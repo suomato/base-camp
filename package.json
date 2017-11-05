@@ -1,7 +1,7 @@
 {
   "name": "base-camp",
-  "version": "1.2.0",
-  "description": "WordPress starter theme for developer based on Timber-library",
+  "version": "1.3.0",
+  "description": "Awesome WordPress starter theme for developers based on modern web technologies.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --hide-modules",
