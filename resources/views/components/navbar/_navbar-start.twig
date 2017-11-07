@@ -19,7 +19,7 @@
                 {# Third level menu #}
                 <div class="navbar-dropdown third-level">
                   {% for grandchild in child.get_children %}
-                    <a class="navbar-item" href="{{ child.link }}">
+                    <a class="navbar-item" href="{{ grandchild.link }}">
                       {{ grandchild.title }}
                     </a>
                   {% endfor %}
