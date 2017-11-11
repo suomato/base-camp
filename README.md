@@ -26,7 +26,7 @@
 ## Requirements
 * [Wordpress](https://wordpress.org/) >= v4.8.2
 * [Composer](https://getcomposer.org/download/) >= v1.5.1
-* [PHP](http://php.net/manual/en/install.php) >= v7.0
+* [PHP](http://php.net/manual/en/install.php) >= v5.6 (Recommended >= v7.0)
 * [Yarn](https://yarnpkg.com/en/) >= v1.0.0 **or** [npm](https://www.npmjs.com/) >= v5.4.0
 * [Nodejs](https://nodejs.org/en/) >= v6.11.3
 
@@ -47,6 +47,7 @@ base-camp/                                          # Theme root
 │   │   │   ├── admin-page.php                      # Register here WordPress Admin Page config
 │   │   │   ├── image-sizes.php                     # Register here WordPress Custom image sizes
 │   │   │   ├── login-page.php                      # Register here WordPress Login Page config
+│   │   │   ├── maintenance.php                     # Maintenance mode config
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
 │   │   │   ├── security.php                        # Things that increase the site security 

@@ -108,7 +108,5 @@ module.exports = {
 };
 
 if (inProduction) {
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin(),
-  );
+  module.exports.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }

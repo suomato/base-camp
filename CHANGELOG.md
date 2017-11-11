@@ -1,3 +1,14 @@
+## **v1.4.0 (2017-11-11)**
+
+### Added
+* Maintenance mode
+* Maintenance config to `app/config/wp/maintenance.php`
+* Maintenance page tempalte `resources/views/maintenance.twig`
+* PHP dotenv (Environment variables)
+
+### Fixed
+* Bug in webpack config
+
 ## **v1.3.0 (2017-11-05)**
 
 ### Added
