@@ -5,9 +5,34 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Base Camp</title>
+  <link rel="icon" href="{{ favicon }}">
+
+  <title>{{ site.name }}</title>
+
+  <style>
+    .container {
+      margin-top: 200px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 350px;
+      max-width: 80%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-transform: capitalize;
+      color: #00695C;
+    }
+  </style>
+
 </head>
 <body>
-<h1>Sivustoa huolletaan</h1>
+<div class="container">
+  <img class="logo" src="{{ logo }}" alt="Base camp">
+  <h1>Try again another time</h1>
+</div>
 </body>
 </html>

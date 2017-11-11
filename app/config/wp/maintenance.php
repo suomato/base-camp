@@ -5,11 +5,17 @@
 | Maintenance
 |--------------------------------------------------------------------------
 |
-| Here you can easily activate site maintenance mode.
-| Just set $maintenance variable true.
+| Here you can activate site maintenance mode by setting $maintenance variable to 'enable'.
+|
+| Maintenance mode will only affect your site's frontend so visitors are able to see
+| wp-admin page. Authenticated administrators can edit pages, posts etc. and they
+| are able to see frontend. However, if you want to activate maintenance mode
+| for the entire site, set the $maintenance variable to 'full'
+|
+| Supported: false, 'enable', 'full'
 |
 */
-$maintenance = false;
+$maintenance = bc_env('MAINTENANCE', false);
 
 /*
 |--------------------------------------------------------------------------
@@ -22,19 +28,6 @@ $maintenance = false;
 */
 $template = 'maintenance.twig';
 
-/*
-|--------------------------------------------------------------------------
-| Maintenance mode
-|--------------------------------------------------------------------------
-|
-| Maintenance will only affect your site's frontend so visitors are able to see
-| wp-admin page. Authenticated administrators can edit pages, posts etc. and they
-| are able to see frontend. However, if you want to activate maintenance mode
-| for the entire site, set $full variable true
-|
-*/
-$full = false;
-
 
 /*****************************************************************************************/
-base_camp_maintenance($maintenance, $full, $template);
+base_camp_maintenance($maintenance, $template);
