@@ -33,7 +33,6 @@
 ## Installation
 * Go your themes folder and run`composer create-project suomato/base-camp`
 * `cd base-camp`
-* duplicate `.env.example` to `.env`
 * `yarn` **or** `npm install`
 * define your dev-server url to `webpack.config.js` file
 * `yarn watch` **or** `npm run watch`
