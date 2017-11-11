@@ -9,7 +9,7 @@
 | Just set $maintenance variable true.
 |
 */
-$maintenance = true;
+$maintenance = false;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,26 +29,12 @@ $template = 'maintenance.twig';
 |
 | Maintenance will only affect your site's frontend so visitors are able to see
 | wp-admin page. Authenticated administrators can edit pages, posts etc. and they
-| are able to see frontend. However, if you want to activate maintenance mode entire site,
-| set $full_maintenance variable true
+| are able to see frontend. However, if you want to activate maintenance mode
+| for the entire site, set $full variable true
 |
 */
-$full_maintenance = false;
+$full = false;
 
 
 /*****************************************************************************************/
-
-$base_camp_maintenance = function () use ($template) {
-    status_header(503);
-    die(\Timber::compile($template));
-};
-
-if ($maintenance) {
-    if ($full_maintenance) {
-        add_action('init', $base_camp_maintenance);
-    }
-    if ( ! current_user_can('administrator')) {
-        add_filter('template_include', $base_camp_maintenance);
-    }
-}
-
+base_camp_maintenance($maintenance, $full, $template);

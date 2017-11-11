@@ -12,3 +12,4 @@ function localize()
 }
 
 add_action('after_setup_theme', 'localize');
+

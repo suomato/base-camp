@@ -44,3 +44,29 @@ function images_path($file = null)
 {
     return get_stylesheet_directory_uri() . '/resources/assets/images/' . $file;
 }
+
+/**
+ * Initialize maintenance mode
+ *
+ * @since 1.4.0
+ *
+ * @param $maintenance
+ * @param $full
+ * @param $template
+ */
+function base_camp_maintenance($maintenance, $full, $template)
+{
+    $base_camp_maintenance = function () use ($template) {
+        status_header(503);
+        die(\Timber::compile($template));
+    };
+
+    if ($maintenance) {
+        if ($full) {
+            add_action('init', $base_camp_maintenance);
+        }
+        if ( ! current_user_can('administrator')) {
+            add_filter('template_include', $base_camp_maintenance);
+        }
+    }
+}
