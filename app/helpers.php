@@ -67,7 +67,11 @@ function base_camp_maintenance($maintenance, $template)
             break;
         case 'enable':
             if ( ! current_user_can('administrator')) {
+                // Frontend
                 add_filter('template_include', $base_camp_maintenance);
+
+                // REST API
+                add_action('rest_api_init', $base_camp_maintenance);
             }
             break;
     }

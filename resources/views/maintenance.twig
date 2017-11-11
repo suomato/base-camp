@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="{{ favicon }}">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>{{ site.name }}</title>
 
   <style>
@@ -16,13 +18,13 @@
     }
 
     .logo {
-      width: 350px;
+      width: 320px;
       max-width: 80%;
       height: auto;
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.8em;
       text-transform: capitalize;
       color: #00695C;
     }
@@ -32,7 +34,11 @@
 <body>
 <div class="container">
   <img class="logo" src="{{ logo }}" alt="Base camp">
-  <h1>Try again another time</h1>
+  <h1>
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    &nbsp;Under maintenance&nbsp;
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+  </h1>
 </div>
 </body>
 </html>
