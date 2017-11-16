@@ -1,3 +1,15 @@
+## **v1.4.2 (2017-11-16)**
+
+### Added
+* Theme init config from `functions.php` to `bootstrap.php` 
+* Extensions to webpack config. Now Vue file can be imported without using .vue extension 
+
+### Changed
+* Refactored assets
+
+### Fixed
+* Vue production bundle (Fixed Webpack config)
+
 ## **v1.4.0 (2017-11-11)**
 
 ### Added

@@ -9,13 +9,12 @@
     data() {
       return {
         message: 'This is example component',
-      }
+      };
     },
-  }
+  };
 </script>
 
-<style lang="scss" scoped>
-  .example-message {
-    color: #00d1b2;
-  }
+<style lang="sass" scoped>
+  .example-message
+    color: #00d1b2
 </style>
