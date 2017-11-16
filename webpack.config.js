@@ -86,6 +86,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
     },
+    extensions: ['*', '.js', '.vue', '.json'],
   },
 
   plugins: [
@@ -123,4 +124,5 @@ if (inProduction) {
       }
     })
   );
+
 }
