@@ -5,6 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var ManifestPlugin = require('webpack-manifest-plugin');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var config = require('./config');
 var inProduction = process.env.NODE_ENV === 'production';
 var styleHash = inProduction ? 'contenthash' : 'hash';
 var scriptHash = inProduction ? 'chunkhash' : 'hash';
@@ -16,7 +17,7 @@ module.exports = {
     vendor: ['jquery', 'vue'],
   },
   output: {
-    path: path.resolve(__dirname, './static/'),
+    path: path.resolve(__dirname, '../static/'),
     filename: `js/[name].[${scriptHash}].js`,
   },
 
@@ -73,7 +74,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'images/',
-              publicPath: '../',
+              publicPath: config.assetsPath + 'static/',
             },
           },
           'image-webpack-loader',
@@ -85,6 +86,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      'images': path.join(__dirname, '../resources/assets/images'),
     },
     extensions: ['*', '.js', '.vue', '.json'],
   },
@@ -95,16 +97,17 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      proxy: 'http://test.dev/', // YOUR DEV-SERVER URL
+      proxy: config.devUrl, // YOUR DEV-SERVER URL
       files: [
-        './*.php',
-        './resources/views/*.twig',
-        './static/*.*',
+        '../*.php',
+        '../resources/views/*.twig',
+        '../static/*.*',
       ],
     }),
 
     new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
       watch: true,
+      root: path.resolve(__dirname, '../'),
     }),
 
     new ManifestPlugin(),
