@@ -1,6 +1,6 @@
 {
   "name": "suomato/base-camp",
-  "description": "Awesome WordPress starter theme for developers based on modern web technologies.",
+  "description": "Awesome WordPress starter theme with own CLI for developers based on modern web technologies.",
   "license": "MIT",
   "keywords": [
     "bulma",
