@@ -1,3 +1,25 @@
+## **v1.5.0 (2017-11-19)**
+
+### Added
+* `build/` for webpack config and custom config
+*  new webpack alias `~images` for relative image paths 
+
+### Changed
+* moved `bootstrap.php` to `app/bootstrap.php`
+* refactored webpack config
+
+## **v1.4.2 (2017-11-16)**
+
+### Added
+* Theme init config from `functions.php` to `bootstrap.php` 
+* Extensions to webpack config. Now Vue file can be imported without using .vue extension 
+
+### Changed
+* Refactored assets
+
+### Fixed
+* Vue production bundle (Fixed Webpack config)
+
 ## **v1.4.0 (2017-11-11)**
 
 ### Added

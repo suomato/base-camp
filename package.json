@@ -1,12 +1,12 @@
 {
   "name": "base-camp",
-  "version": "1.4.0",
-  "description": "Awesome WordPress starter theme for developers based on modern web technologies.",
+  "version": "1.5.0",
+  "description": "Awesome WordPress starter theme with own CLI for developers based on modern web technologies.",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env webpack --hide-modules",
+    "dev": "cross-env webpack --config build/webpack.config.js --hide-modules",
     "watch": "npm run dev -- --watch",
-    "prod": "cross-env NODE_ENV=production webpack --hide-modules"
+    "prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js --hide-modules"
   },
   "keywords": [],
   "author": "Toni Suomalainen",
