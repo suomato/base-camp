@@ -6,7 +6,7 @@
 
 ## About Base Camp
 
-> Awesome WordPress starter theme for developers based on modern web technologies.
+> Awesome WordPress starter theme with own CLI for developers based on modern web technologies.
 
 ## Features
 * [Bulma](http://bulma.io/) (Responsive CSS framework based on Flexbox)
@@ -34,7 +34,7 @@
 * Go your themes folder and run`composer create-project suomato/base-camp`
 * `cd base-camp`
 * `yarn` **or** `npm install`
-* define your dev-server url to `webpack.config.js` file
+* define your custom webpack config to `build/config.js` file
 * `yarn watch` **or** `npm run watch`
 * Happy developing :)
 
@@ -57,7 +57,11 @@ base-camp/                                          # Theme root
 │   │   └── timber.php                              # Timber specific config
 │   ├── timber-extends/                             # Extended Timber Classes
 │   │   └── BaseCampSite.php                        # Extended TimberSite Class
+│   ├── bootstrap.php                               # Bootstrap theme
 │   ├── helpers.php                                 # Common helper functions
+├── build/                                          # Theme assets and views
+│   ├── config.js                                   # Custom webpack config
+│   ├── webpack.config.js                           # Webpack config
 ├── resources/                                      # Theme assets and views
 │   ├── assets/                                     # Front-end assets
 │   │   ├── js/                                     # Javascripts

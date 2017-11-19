@@ -1,3 +1,13 @@
+## **v1.5.0 (2017-11-19)**
+
+### Added
+* `build/` for webpack config and custom config
+*  new webpack alias `~images` for relative image paths 
+
+### Changed
+* moved `bootstrap.php` to `app/bootstrap.php`
+* refactored webpack config
+
 ## **v1.4.2 (2017-11-16)**
 
 ### Added
