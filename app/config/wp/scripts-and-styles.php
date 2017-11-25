@@ -21,11 +21,9 @@ function base_camp_scripts_and_styles()
     if (is_singular() && comments_open() && (get_option('thread_comments') == 1)) {
         wp_enqueue_script('comment-reply');
     }
-
 }
 
 add_action('wp_enqueue_scripts', 'base_camp_scripts_and_styles', 999);
-
 
 /**
  * Register Login Page scripts and styles and enqueue them

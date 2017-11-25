@@ -66,7 +66,7 @@ function base_camp_maintenance($maintenance, $template)
             add_action('init', $base_camp_maintenance);
             break;
         case 'enable':
-            if ( ! current_user_can('administrator')) {
+            if (!current_user_can('administrator')) {
                 // Frontend
                 add_filter('template_include', $base_camp_maintenance);
 

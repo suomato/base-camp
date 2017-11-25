@@ -18,4 +18,3 @@ function base_camp_custom_image_sizes($sizes)
 }
 
 add_filter('image_size_names_choose', 'base_camp_custom_image_sizes');
-
