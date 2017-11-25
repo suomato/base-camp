@@ -1,8 +1,7 @@
 <?php
 
 // Send notice to user if Timber Class cannot be found
-if ( ! class_exists('Timber')) {
-
+if (!class_exists('Timber')) {
     // Notice on admin pages
     add_action('admin_notices', function () {
         echo '<div class="error">
@@ -42,7 +41,6 @@ $pagination_mid_size = 2;
 
 $pagination_mid_size += 2; // DON'T TOUCH
 
-
 /*
 |--------------------------------------------------------------------------
 | Template paths
@@ -55,7 +53,6 @@ $pagination_mid_size += 2; // DON'T TOUCH
 */
 
 Timber::$dirname = ['resources/views'];
-
 
 /**
  * Adds data to Timber context.

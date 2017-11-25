@@ -28,6 +28,5 @@ $maintenance = bc_env('MAINTENANCE', false);
 */
 $template = 'maintenance.twig';
 
-
 /*****************************************************************************************/
 base_camp_maintenance($maintenance, $template);

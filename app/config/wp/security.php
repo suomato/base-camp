@@ -39,7 +39,6 @@ add_filter('style_loader_src', 'base_camp_remove_query_string_version', 9999);
 // Remove Wp version from scripts
 add_filter('script_loader_src', 'base_camp_remove_query_string_version', 9999);
 
-
 /*
 |--------------------------------------------------------------------------
 | Custom Login Error Message
