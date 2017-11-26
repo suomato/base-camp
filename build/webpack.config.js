@@ -105,7 +105,7 @@ module.exports = {
       host: 'localhost',
       port: 3000,
       proxy: config.devUrl, // YOUR DEV-SERVER URL
-      files: ['../*.php', '../resources/views/*.twig', '../static/*.*'],
+      files: ['./*.php', './resources/views/*.twig', './static/*.*'],
     }),
 
     new CleanWebpackPlugin(['static/css/*', 'static/js/*', 'static/fonts/*'], {
