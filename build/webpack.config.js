@@ -108,7 +108,7 @@ module.exports = {
       files: ['./*.php', './resources/views/**/*.twig', './static/*.*'],
     }),
 
-    new CleanWebpackPlugin(['static/css/*', 'static/js/*', 'static/fonts/*'], {
+    new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
       watch: true,
       root: path.resolve(__dirname, '../'),
     }),
