@@ -1,0 +1,51 @@
+div.product
+  position: relative
+
+  .woocommerce-product-gallery.woocommerce-product-gallery--with-images
+    width: 100%
+
+  .product_title.entry-title
+    font-weight: 700
+
+  p.price,
+  span.price
+    color: $dark-primary
+    margin-bottom: 0.5em
+
+  .woocommerce-tabs
+    margin-top: 2em
+
+    ul.tabs
+      display: flex
+      justify-content: flex-start
+      border-bottom-color: #dbdbdb
+      border-bottom-style: solid
+      border-bottom-width: 1px
+      overflow: visible
+      padding: 0
+
+      &:before,
+      &:after
+        content: none
+
+      li
+        background-color: transparent
+        border: 0
+        margin: 0
+        padding: 0
+
+        &:before,
+        &:after
+          content: none
+
+        a
+          color: #4a4a4a
+          border-bottom-color: #dbdbdb
+          border-bottom-style: solid
+          border-bottom-width: 1px
+          padding: 0.5em 1em
+
+      li.active
+        a
+          border-bottom-color: $bc-primary
+          color: $bc-primary

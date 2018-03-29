@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  {% do action('woocommerce_before_single_product') %}
+
+  <div class="main-article {{ post.class }}">
+    <h1 class="title is-2">{{ post.title }}</h1>
+    <h5 class="subtitle is-5">
+      <time class="timestamp">
+        <small>{{ post.date }} {{ post.time }}</small>
+      </time>
+    </h5>
+
+    {% if post.can_edit %}
+      <div class="edit-post-link"><a href="{{ post.get_edit_url }}">
+        <i class="fa fa-pencil" aria-hidden="true"></i> <span>{{ messages.single.edit }}</span></a>
+      </div>
+    {% endif %}
+
+    <div class="columns">
+      <div class="entry-images column is-6">
+        {% do action('woocommerce_before_single_product_summary') %}
+      </div>
+
+      <div class="column is-6">
+        {% do action('woocommerce_single_product_summary') %}
+      </div>
+    </div>
+
+    {% do action('woocommerce_after_single_product_summary') %}
+    <meta itemprop="url" content="{{ post.link }}" />
+  </div>
+
+  {% do action('woocommerce_after_single_product') %}
+
+{% endblock  %}
