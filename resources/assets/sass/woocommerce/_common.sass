@@ -1,0 +1,43 @@
+input
+  @extend .input
+
+textarea
+  @extend .textarea
+
+label
+  @extend .label
+
+button.button
+  @extend .button
+
+#respond input#submit
+  @extend .button
+
+  @extend .is-primary
+
+button.button.alt,
+a.button.alt,
+input.button.alt
+  @extend .is-primary
+
+  display: flex
+  justify-content: center
+
+.star-rating > span,
+.stars a
+  color: $dark-primary
+
+.entry-images
+  position: relative
+
+span.onsale
+  @extend .tag
+
+  @extend .is-small
+
+  @extend .is-danger
+
+  font-size: 0.65rem !important
+
+.woocommerce-product-details__short-description
+  margin-bottom: 0.5em

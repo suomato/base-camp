@@ -1,0 +1,36 @@
+<article {{ fn('post_class', ['tease-product column is-4'] ) }}>
+
+  {{ fn('timber_set_product', post) }}
+
+  <div class="media">
+
+    {% if showthumb %}
+      <div class="media-figure {% if not post.thumbnail %}placeholder{% endif %}">
+        <a href="{{ post.link }}">
+        {% if post.thumbnail %}
+          <img src="{{ post.thumbnail.src|resize(post_thumb_size[0], post_thumb_size[1]) }}" />
+        {% else %}
+          <span class="thumb-placeholder"><i class="icon-camera"></i></span>
+        {% endif %}
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="media-content">
+
+      {% do action('woocommerce_before_shop_loop_item_title') %}
+
+      {% if post.title %}
+        <h3 class="entry-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      {% else %}
+        <h3 class="entry-title"><a href="{{ post.link }}">{{ fn('the_title') }}</a></h3>
+      {% endif %}
+
+      {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+      {% do action( 'woocommerce_after_shop_loop_item' ) %}
+
+    </div>
+
+  </div>
+
+</article>
