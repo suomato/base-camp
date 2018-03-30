@@ -71,7 +71,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'images/',
-              publicPath: `${config.assetsPath}static/`,
+              publicPath: `${config.assetsPath}static/images/`,
             },
           },
           'image-webpack-loader',
