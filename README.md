@@ -22,13 +22,14 @@
   * [Vuejs](https://vuejs.org/) for boosting frontend development
   * [BrowserSync](https://www.browsersync.io/) for synchronised browser testing
 * [Luna](https://github.com/suomato/base-camp#luna-command-line-interface) (Command-line interface included with Base Camp)
+* [WooCommerce](https://woocommerce.com/) support with basic boilerplate.
 
 ## Requirements
-* [Wordpress](https://wordpress.org/) >= v4.8.2
-* [Composer](https://getcomposer.org/download/) >= v1.5.1
+* [Wordpress](https://wordpress.org/) >= v4.9.4
+* [Composer](https://getcomposer.org/download/) >= v1.6.3
 * [PHP](http://php.net/manual/en/install.php) >= v5.6 (Recommended >= v7.0)
-* [Yarn](https://yarnpkg.com/en/) >= v1.0.0 **or** [npm](https://www.npmjs.com/) >= v5.4.0
-* [Nodejs](https://nodejs.org/en/) >= v6.11.3
+* [Yarn](https://yarnpkg.com/en/) >= v1.5.1 **or** [npm](https://www.npmjs.com/) >= v5.6.0
+* [Nodejs](https://nodejs.org/en/) >= v8.11.1
 
 ## Installation
 * Go your themes folder and run`composer create-project suomato/base-camp`
@@ -50,11 +51,12 @@ base-camp/                                          # Theme root
 │   │   │   ├── maintenance.php                     # Maintenance mode config
 │   │   │   ├── menus.php                           # Register here WordPress navigation menus
 │   │   │   ├── scripts-and-styles.php              # Register here WordPress scripts and styles
-│   │   │   ├── security.php                        # Things that increase the site security 
+│   │   │   ├── security.php                        # Things that increase the site security
 │   │   │   ├── sidebars.php                        # Register here WordPress sidebars
 │   │   │   └── theme-supports.php                  # Register here WordPress theme features
 │   │   ├── autoload.php                            # Includes all config files (DON'T REMOVE THIS)
-│   │   └── timber.php                              # Timber specific config
+│   │   ├── timber.php                              # Timber specific config
+│   │   └── woocommerce.php                         # Init woocommerce support
 │   ├── timber-extends/                             # Extended Timber Classes
 │   │   └── BaseCampSite.php                        # Extended TimberSite Class
 │   ├── bootstrap.php                               # Bootstrap theme
@@ -108,7 +110,7 @@ php luna make:route {name}
 
 #### Make Shortcode
 
-> This Command helps you to create a new shortcode with very clean boilerplate. 
+> This Command helps you to create a new shortcode with very clean boilerplate.
 
 ```
 php luna make:shortcode {name}
@@ -163,7 +165,7 @@ Then define some data
 
 ******************************************************************
 
-// app/config/wp/shortcodes/LuckyNumber.php 
+// app/config/wp/shortcodes/LuckyNumber.php
 
 protected function template($attr, $content)
 {
