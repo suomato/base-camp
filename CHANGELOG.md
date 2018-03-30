@@ -1,8 +1,21 @@
+## **v1.6.0 (2018-03-30)**
+
+### Added
+* Woocommerce support
+* Basic boilerplate for woocommerce (`.twig` and `.sass.` files)
+
+### Changed
+* Updated javascrit packages
+
+### Fixed
+* Images and fonts `publicPath` in `webpack.config.js`
+* Fixed localize path in `bootstrap.php`
+
 ## **v1.5.0 (2017-11-19)**
 
 ### Added
 * `build/` for webpack config and custom config
-*  new webpack alias `~images` for relative image paths 
+*  new webpack alias `~images` for relative image paths
 
 ### Changed
 * moved `bootstrap.php` to `app/bootstrap.php`
@@ -11,8 +24,8 @@
 ## **v1.4.2 (2017-11-16)**
 
 ### Added
-* Theme init config from `functions.php` to `bootstrap.php` 
-* Extensions to webpack config. Now Vue file can be imported without using .vue extension 
+* Theme init config from `functions.php` to `bootstrap.php`
+* Extensions to webpack config. Now Vue file can be imported without using .vue extension
 
 ### Changed
 * Refactored assets
@@ -50,7 +63,7 @@
 ### Changed
 * Refactored Navbar component
 * Refactored `_variables.sass` file
- 
+
 ### Fixed
 * Pagination border-color
 
@@ -60,7 +73,7 @@
 
 ### Added
 * Login page config to `app/config/wp/login-page.php`
-* Favicon to `resources/assets/images/favicon.png` 
+* Favicon to `resources/assets/images/favicon.png`
 * Login page styles to `resources/assets/sass/login.sass`
 * Images path helper `images_path()` to `app/helpers.php`
 * `File-loader` and `image-webpack-loader` to webpack
@@ -68,7 +81,7 @@
 ### Changed
 * Sass variables to own file `resources/assets/sass/_variables.sass`
 
- 
+
 ### Fixed
 * CleanWebpackPlugin better config. Watch mode clear static folder after every build
 

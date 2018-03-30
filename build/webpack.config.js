@@ -71,7 +71,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'images/',
-              publicPath: `${config.assetsPath}static/`,
+              publicPath: `${config.assetsPath}static/images/`,
             },
           },
           'image-webpack-loader',
@@ -84,7 +84,7 @@ module.exports = {
           limit: 10000,
           name: '[name].[hash:7].[ext]',
           outputPath: 'fonts/',
-          publicPath: `${config.assetsPath}static/`,
+          publicPath: `${config.assetsPath}static/fonts/`,
         },
       },
     ],
