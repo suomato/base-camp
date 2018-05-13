@@ -38,3 +38,17 @@ function base_camp_login_scripts_and_styles()
 }
 
 add_action('login_enqueue_scripts', 'base_camp_login_scripts_and_styles', 999);
+
+/**
+ * Register Admin Page scripts and styles and enqueue them
+ */
+function base_camp_admin_scripts_and_styles()
+{
+    // Register styles
+    wp_register_style('base-camp-admin-styles', assets('admin.css'), [], '', 'all');
+
+    // Enqueue scripts and styles
+    wp_enqueue_style('base-camp-admin-styles');
+}
+
+add_action('admin_enqueue_scripts', 'base_camp_admin_scripts_and_styles', 999);
