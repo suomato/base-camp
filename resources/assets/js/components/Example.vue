@@ -1,6 +1,10 @@
 <template>
   <div class="example">
-    <img class="example-logo" src="~images/base-camp-logo.png" alt="Logo" />
+    <img
+      class="example-logo"
+      src="~images/base-camp-logo.png"
+      alt="Logo"
+    >
     <p class="example-message">{{ message }}</p>
   </div>
 </template>
