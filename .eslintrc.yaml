@@ -1,5 +1,7 @@
 ---
-  extends: "airbnb"
+  extends: [
+    "plugin:vue/recommended"
+  ]
   env:
     browser: true
     es6: true
@@ -12,7 +14,6 @@
     no-new: 0
     max-len: [2, 80, 2, { "ignoreUrls": true }]
     quotes: [2, "single"]
-  parser:
-    babel-eslint
   parserOptions:
+    parser: "babel-eslint"
     ecmaVersion: 6
