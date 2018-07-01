@@ -1,3 +1,20 @@
+## **vx.x.x (2018-07-xx)**
+
+### Added
+* Variables in `_variables.sass` can be used in `*.vue` files
+* Webpack removes unused css from `app.[hash].css` file
+* A new command `make:menu-page`
+* screenshot for theme
+
+### Changed
+* Migrated from webpack 3 to webpack 4
+* Moved Luna CLIs [docs](https://github.com/suomato/luna) to `suomato/luna` repository
+* Updated composer packages (Now PHP version must be at least v7.0!)
+* Updated Timber to v1.7.1
+
+### Removed
+* `dd()` from `/app/helpers.php`. This function comes now with the `symfony/var-dumper`
+
 ## **v1.6.0 (2018-03-30)**
 
 ### Added
