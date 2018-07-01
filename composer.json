@@ -32,12 +32,12 @@
   },
   "require": {
     "php": "^7.0",
-    "wpackagist-plugin/timber-library": "1.5.2",
-    "symfony/var-dumper": "^3.3",
-    "symfony/console": "^3.3",
+    "wpackagist-plugin/timber-library": "1.7.1",
+    "symfony/var-dumper": "^4.1",
+    "symfony/console": "^4.1",
     "league/flysystem": "^1.0",
-    "symfony/finder": "^3.3",
-    "suomato/luna": "^1.1.0",
+    "symfony/finder": "^4.1",
+    "suomato/luna": "^1.2",
     "vlucas/phpdotenv": "^2.4"
   },
   "autoload": {

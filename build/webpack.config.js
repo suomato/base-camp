@@ -1,8 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const glob = require('glob');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const config = require('./config');
@@ -10,6 +12,19 @@ const config = require('./config');
 const inProduction = process.env.NODE_ENV === 'production';
 const styleHash = inProduction ? 'contenthash' : 'hash';
 const scriptHash = inProduction ? 'chunkhash' : 'hash';
+
+// LOADER HELPERS
+const extractCss = {
+  loader: MiniCssExtractPlugin.loader,
+  options: {
+    publicPath: `${config.assetsPath}static/css/`,
+  },
+};
+
+const cssLoader = {
+  loader: 'css-loader',
+  options: { minimize: inProduction },
+};
 
 module.exports = {
   entry: {
@@ -28,41 +43,49 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            scss: ['vue-style-loader', 'css-loader', 'sass-loader'],
-            sass: [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax',
-            ],
-          },
-          // other vue-loader options go here
-        },
-      },
-      {
-        test: /\.s[ac]ss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: { minimize: inProduction },
-            },
-            {
-              loader: 'sass-loader',
-              options: { sourceMap: true },
-            },
-          ],
-        }),
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['vue-style-loader', extractCss, cssLoader],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          extractCss,
+          cssLoader,
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [
+                path.resolve(__dirname, '../resources/assets/sass'),
+              ],
+              data: '@import "variables";',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          extractCss,
+          cssLoader,
+          {
+            loader: 'sass-loader',
+            options: {
+              indentedSyntax: true,
+              includePaths: [
+                path.resolve(__dirname, '../resources/assets/sass'),
+              ],
+              data: '@import "variables";',
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
@@ -91,6 +114,19 @@ module.exports = {
     ],
   },
 
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: 'all',
+          name: 'vendor',
+          test: 'vendor',
+          enforce: true,
+        },
+      },
+    },
+  },
+
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
@@ -100,7 +136,24 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin(`css/[name].[${styleHash}].css`),
+    new VueLoaderPlugin(),
+
+    new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
+      root: path.join(__dirname, '../'),
+      watch: true,
+    }),
+
+    new MiniCssExtractPlugin({
+      filename: `css/[name].[${styleHash}].css`,
+    }),
+
+    new PurgecssPlugin({
+      paths: () =>
+        glob.sync(path.join(__dirname, '../resources/**/*'), { nodir: true }),
+      only: ['app'],
+    }),
+
+    new ManifestPlugin(),
 
     new BrowserSyncPlugin({
       host: 'localhost',
@@ -108,26 +161,5 @@ module.exports = {
       proxy: config.devUrl, // YOUR DEV-SERVER URL
       files: ['./*.php', './resources/views/**/*.twig', './static/*.*'],
     }),
-
-    new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
-      watch: true,
-      root: path.resolve(__dirname, '../'),
-    }),
-
-    new ManifestPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: `js/[name].[${scriptHash}].js`,
-    }),
   ],
 };
-
-if (inProduction) {
-  module.exports.plugins.push(new webpack.optimize.UglifyJsPlugin());
-
-  module.exports.plugins.push(new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: '"production"',
-    },
-  }));
-}

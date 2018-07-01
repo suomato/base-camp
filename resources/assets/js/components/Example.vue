@@ -24,5 +24,5 @@ export default {
     max-width: 200px
 
   .example-message
-    color: #00d1b2
+    color: $bc-primary
 </style>
