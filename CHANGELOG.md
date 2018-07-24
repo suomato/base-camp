@@ -1,4 +1,4 @@
-## **vx.x.x (2018-07-xx)**
+## **v1.7.0 (2018-07-01)**
 
 ### Added
 * Variables in `_variables.sass` can be used in `*.vue` files
