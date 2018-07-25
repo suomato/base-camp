@@ -42,7 +42,10 @@
   },
   "autoload": {
     "files": ["app/helpers.php", "resources/languages/messages.php"],
-    "classmap": ["app/"]
+    "classmap": ["app/timber-extends"],
+    "psr-4": {
+      "Basecamp\\Models\\": "app/models/"
+    }
   },
   "scripts": {
     "post-create-project-cmd": [
