@@ -1,3 +1,11 @@
+## **v1.8.0 (2018-07-27)**
+
+### Added
+* Models (Wrapper classes for Wordpress Post Types and Taxonomies.)
+* Updated Luna (A new command `make:custom-taxonomy`)
+* `make:custom-post-type` and `make:custom-taxonomy` command creates model which helps interact with a new post types or taxonomy.
+* namespace `Basecamp\Models\` for `app/models/` directory
+
 ## **v1.7.0 (2018-07-01)**
 
 ### Added
