@@ -58,6 +58,7 @@ base-camp/                                          # Theme root
 │   │   ├── autoload.php                            # Includes all config files (DON'T REMOVE THIS)
 │   │   ├── timber.php                              # Timber specific config
 │   │   └── woocommerce.php                         # Init woocommerce support
+│   ├── models/                                     # Wrappers for Timber Classes
 │   ├── timber-extends/                             # Extended Timber Classes
 │   │   └── BaseCampSite.php                        # Extended TimberSite Class
 │   ├── bootstrap.php                               # Bootstrap theme
@@ -80,10 +81,61 @@ base-camp/                                          # Theme root
 │   │   └── header/                                 # Theme header templates
 ```
 
-## Luna (Command-line interface)
-<<<<<<< HEAD
-=======
+## Models
+> Models are wrapper classes for Wordpress Post Types and Taxonomies. They provide very simple interface to interact with the database.
 
->>>>>>> master
+### How to use
+```
+// index.php
+
+<?php
+
+use Basecamp\Models\Post;
+
+// returns an array of TimberPost objects
+Post::all();
+
+// returns TimberPost object with the ID 1 (if it exists)
+Post::find(1);
+
+// returns first two posts;
+Post::take(2)->get();
+
+// skips first two posts;
+Post::skip(2)->get();
+
+// returns published posts;
+// Supported values: https://codex.wordpress.org/Post_Status#Default_Statuses
+Post::status('publish')->get();
+
+// returns all posts except post with ID 1;
+Post::exclude([1])->get();
+
+// returns only posts with ID 1;
+Post::include([1])->get();
+
+// returns an array of posts descending order by author;
+// Supported Values: https://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters
+Post::orderby('author', 'desc')->get();
+
+// returns an array of posts authored by admin;
+Post::author('admin')->get();
+
+// returns an array of posts which are in category 'cars' or 'vehicles';
+Post::inCategory(['cars', 'vehicles'])->get();
+```
+
+> All queries are chainable. For example you can get three first incomplete posts authored by admin:
+```
+Post::status('draft')->author('admin')->take(3)->get();
+```
+
+All models are able to use almost every methods. However there are some exceptions:
+
+* Only `Post` model has `inCategory()` method
+* Taxonomies (Category, Tag) have `hideEmpty()` method
+
+
+## Luna (Command-line interface)
 > [Docs](https://github.com/suomato/luna)
 

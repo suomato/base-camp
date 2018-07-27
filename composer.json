@@ -37,7 +37,7 @@
     "symfony/console": "^4.1",
     "league/flysystem": "^1.0",
     "symfony/finder": "^4.1",
-    "suomato/luna": "^1.2",
+    "suomato/luna": "^1.3",
     "vlucas/phpdotenv": "^2.4"
   },
   "autoload": {
