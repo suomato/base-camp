@@ -1,6 +1,6 @@
 {
   "name": "base-camp",
-  "version": "1.8.0",
+  "version": "1.8.2",
   "description": "Awesome WordPress starter theme with own CLI for developers based on modern web technologies.",
   "main": "index.js",
   "scripts": {
