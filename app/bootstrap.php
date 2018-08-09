@@ -3,6 +3,9 @@
 // Load all composer packages
 require_once __DIR__ . '/../vendor/autoload.php';
 
+// Init Timber
+$timber = new \Timber\Timber();
+
 // Init Dotenv
 $dotenv = new Dotenv\Dotenv(__DIR__ . '/..');
 $dotenv->load();
