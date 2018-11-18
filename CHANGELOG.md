@@ -1,3 +1,8 @@
+## **v1.8.2 (2018-08-09)**
+
+### Changed
+* Timber will be added via composer instead of wordpress plugin
+
 ## **v1.8.0 (2018-07-27)**
 
 ### Added
