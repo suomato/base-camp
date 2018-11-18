@@ -76,3 +76,16 @@ function bc_env($env_variable, $default)
 {
     return getenv($env_variable) ? getenv($env_variable) : $default;
 }
+
+/**
+ * Return random string
+ *
+ * @since 1.9.0
+ *
+ * @param int $length
+ * @return void
+ */
+function bc_random_string($length)
+{
+    return substr(bin2hex(random_bytes($length)), 0, $length);
+}

@@ -11,5 +11,6 @@ class BaseCampSite extends TimberSite
     {
         parent::__construct();
         $this->wp_link = site_url();
+        $this->link    = home_url();
     }
 }
