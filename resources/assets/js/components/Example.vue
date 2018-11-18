@@ -25,4 +25,11 @@ export default {
 
   .example-message
     color: $bc-primary
+
+  +touch
+    .example-logo
+      max-width: 120px
+
+    .example-message
+      color: $bc-secondary
 </style>
