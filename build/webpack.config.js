@@ -46,6 +46,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
       },
       {
@@ -64,7 +65,7 @@ module.exports = {
               includePaths: [
                 path.resolve(__dirname, '../resources/assets/sass'),
               ],
-              data: '@import "variables";',
+              data: '@import "vue-styles";',
             },
           },
         ],
@@ -82,7 +83,7 @@ module.exports = {
               includePaths: [
                 path.resolve(__dirname, '../resources/assets/sass'),
               ],
-              data: '@import "variables";',
+              data: '@import "vue-styles";',
             },
           },
         ],
@@ -147,12 +148,6 @@ module.exports = {
       filename: `css/[name].[${styleHash}].css`,
     }),
 
-    new PurgecssPlugin({
-      paths: () =>
-        glob.sync(path.join(__dirname, '../resources/**/*'), { nodir: true }),
-      only: ['app'],
-    }),
-
     new ManifestPlugin(),
 
     new BrowserSyncPlugin({
@@ -163,3 +158,13 @@ module.exports = {
     }),
   ],
 };
+
+if (inProduction) {
+  module.exports.plugins.push(
+    new PurgecssPlugin({
+      paths: () => glob.sync(path.join(__dirname, '../resources/**/*'), { nodir: true }),
+      only: ['app'],
+      whitelist: [],
+    }),
+  );
+}
