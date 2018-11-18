@@ -37,6 +37,7 @@
 * `yarn` **or** `npm install`
 * define your custom webpack config to `build/config.js` file
 * `yarn watch` **or** `npm run watch`
+* Remember to activate Timber plugin!
 * Happy developing :)
 
 ## Structure
