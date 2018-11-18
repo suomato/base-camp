@@ -7,11 +7,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const config = require('./config');
 
 const inProduction = process.env.NODE_ENV === 'production';
-const styleHash = inProduction ? 'contenthash' : 'hash';
-const scriptHash = inProduction ? 'chunkhash' : 'hash';
+const styleHash = inProduction ? '.[contenthash]' : '';
+const scriptHash = inProduction ? '.[chunkhash]' : '';
 
 // LOADER HELPERS
 const extractCss = {
@@ -28,14 +29,15 @@ const cssLoader = {
 
 module.exports = {
   entry: {
-    app: glob.sync('./resources/assets/+(s[ac]ss|js)/main.+(s[ac]ss|js)'),
-    login: glob.sync('./resources/assets/+(s[ac]ss|js)/login.+(s[ac]ss|js)'),
-    admin: glob.sync('./resources/assets/+(s[ac]ss|js)/admin.+(s[ac]ss|js)'),
+    scripts: './resources/assets/js/main.js',
+    styles: './resources/assets/sass/main.sass',
+    login: './resources/assets/sass/login.sass',
+    admin: './resources/assets/sass/admin.sass',
     vendor: ['jquery', 'vue'],
   },
   output: {
     path: path.resolve(__dirname, '../static/'),
-    filename: `js/[name].[${scriptHash}].js`,
+    filename: `js/[name]${scriptHash}.js`,
   },
 
   module: {
@@ -141,11 +143,14 @@ module.exports = {
 
     new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
       root: path.join(__dirname, '../'),
-      watch: true,
+      watch: false,
     }),
 
+    new FixStyleOnlyEntriesPlugin({ extensions: ['less', 'scss', 'css', 'sass'] }),
+
     new MiniCssExtractPlugin({
-      filename: `css/[name].[${styleHash}].css`,
+      filename: `css/[name]${styleHash}.css`,
+      // filename: 'css/[name].css',
     }),
 
     new ManifestPlugin(),
@@ -154,7 +159,11 @@ module.exports = {
       host: 'localhost',
       port: 3000,
       proxy: config.devUrl, // YOUR DEV-SERVER URL
-      files: ['./*.php', './resources/views/**/*.twig', './static/*.*'],
+      files: ['./*.php', './resources/views/**/*.twig', './static/css/*.*', './static/js/*.*'],
+    },
+    {
+      reload: false,
+      injectCss: true,
     }),
   ],
 };

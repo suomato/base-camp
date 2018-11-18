@@ -9150,6 +9150,11 @@ webpack-cli@^3.0.8:
     v8-compile-cache "^2.0.2"
     yargs "^12.0.2"
 
+webpack-fix-style-only-entries@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/webpack-fix-style-only-entries/-/webpack-fix-style-only-entries-0.0.5.tgz#117fa3d9f8297902e97f1cd6ae231061586262db"
+  integrity sha512-GhsG9gvvsHIIrb+8MHWjrvzfXxHQHaQu/8pM6fbz/rJi7KgtXkFWVyPaFTdf2+a/VCbL2jQVIgG5wWMcsEL4BA==
+
 webpack-manifest-plugin@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-2.0.4.tgz#e4ca2999b09557716b8ba4475fb79fab5986f0cd"
