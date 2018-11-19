@@ -3,32 +3,40 @@
 <!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
 <!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" {{site.language_attributes}}>
+  <!--<![endif]-->
 
-{# <head> #}
-{% include 'header/_head.twig' %}
-{# </head> #}
+  {# <head> #}
+  {% include 'header/_head.twig' %}
+  {# </head> #}
 
-<body class="{{ body_class }}">
-<div class="pageloader is-active"></div>
+  <body class="{{ body_class }}">
+    <div class="pageloader is-active"></div>
 
-<div id="app">
-
-  <header>
-    <div class="container">
-      {% include "components/navbar/index.twig" %}
-    </div>
-    <section class="hero is-medium is-primary is-bold has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            {{ site.title }}
-          </h1>
-          <h2 class="subtitle">
-            {{ site.description }}
-          </h2>
-        </div>
+    {% if not in_production %}
+      <div class="current-template-file-name">
+        {{ current_template_file }}
       </div>
-    </section>
+    {% endif %}
 
-  </header>
+    <div id="app">
+
+      <header>
+        <div class="container">
+          {% include "components/navbar/index.twig" %}
+        </div>
+        <section class="hero is-medium is-primary is-bold has-text-centered">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                {{ site.title }}
+              </h1>
+              <h2 class="subtitle">
+                {{ site.description }}
+              </h2>
+            </div>
+          </div>
+        </section>
+
+      </header>
