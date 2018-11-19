@@ -14,5 +14,13 @@ module.exports = {
    *
    * This is for Browsersync.
    */
-  devUrl: 'http://test.dev/',
+  devUrl: 'http://localhost:8080',
+
+  /**
+   * You can whitelist selectors to stop purgecss from removing them from your CSS
+   *
+   * whitelist: ['random', 'yep', 'button']
+   * In the example, the selectors .random, #yep, button will be left in the final CSS
+   */
+  whitelist: [],
 };

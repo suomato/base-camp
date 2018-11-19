@@ -27,6 +27,21 @@ const cssLoader = {
   options: { minimize: inProduction },
 };
 
+const images = [
+  {
+    loader: 'file-loader',
+    options: {
+      name: '[name].[ext]',
+      outputPath: 'images/',
+      publicPath: `${config.assetsPath}static/images/`,
+    },
+  },
+];
+
+if (inProduction) {
+  images.push('image-webpack-loader');
+}
+
 module.exports = {
   entry: {
     scripts: './resources/assets/js/main.js',
@@ -92,17 +107,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-              publicPath: `${config.assetsPath}static/images/`,
-            },
-          },
-          'image-webpack-loader',
-        ],
+        use: images,
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -150,7 +155,6 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: `css/[name]${styleHash}.css`,
-      // filename: 'css/[name].css',
     }),
 
     new ManifestPlugin(),
@@ -172,8 +176,8 @@ if (inProduction) {
   module.exports.plugins.push(
     new PurgecssPlugin({
       paths: () => glob.sync(path.join(__dirname, '../resources/**/*'), { nodir: true }),
-      only: ['app'],
-      whitelist: [],
+      only: ['styles'],
+      whitelist: config.whitelist,
     }),
   );
 }
