@@ -1,24 +1,5 @@
 <?php
 
-// Send notice to user if Timber Class cannot be found
-if (!class_exists('Timber')) {
-    // Notice on admin pages
-    add_action('admin_notices', function () {
-        echo '<div class="error">
-                  <p>Timber not activated. Make sure you activate the plugin in
-                      <a href="' . esc_url(admin_url('plugins.php#timber')) . '">' . esc_url(admin_url('plugins.php')) . '</a>
-                  </p>
-              </div>';
-    });
-
-    // Notice on front pages
-    add_filter('template_include', function () {
-        return get_stylesheet_directory() . '/no-timber.html';
-    });
-
-    return 0;
-}
-
 /*
 |--------------------------------------------------------------------------
 | Pagination mid size
@@ -78,8 +59,13 @@ function add_to_context($data)
     // Favicon
     $data['favicon'] = images_path('favicon.png');
 
+    // Current Template File Name
+    $data['current_template_file'] = basename($GLOBALS['template']);
+
     // Extend TimberSite object
     $data['site'] = new BaseCampSite();
+
+    $data['in_production'] = bc_env('MODE', 'production') === 'production';
 
     return $data;
 }
