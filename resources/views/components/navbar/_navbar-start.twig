@@ -3,7 +3,7 @@
     {% if item.get_children %}
 
       <ul class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link {{ item.class }}">
           {{ item.title }}
         </a>
 
@@ -11,7 +11,7 @@
         <ul class="navbar-dropdown is-hover second-level">
           {% for child in item.get_children %}
             <li class="">
-              <a class="navbar-item {{ child.get_children ? 'has-children' }}" href="{{ child.link }}">
+              <a class="navbar-item {{ child.class }} {{ child.get_children ? 'has-children' }}" href="{{ child.link }}">
                 {{ child.title }}
               </a>
               {% if child.get_children %}
@@ -19,7 +19,7 @@
                 {# Third level menu #}
                 <div class="navbar-dropdown third-level">
                   {% for grandchild in child.get_children %}
-                    <a class="navbar-item" href="{{ grandchild.link }}">
+                    <a class="navbar-item {{ grandchild.class }}" href="{{ grandchild.link }}">
                       {{ grandchild.title }}
                     </a>
                   {% endfor %}
@@ -32,7 +32,7 @@
 
       </ul>
     {% else %}
-      <a class="navbar-item" href="{{ item.link }}">
+      <a class="navbar-item {{ item.class }}" href="{{ item.link }}">
         {{ item.title }}
       </a>
     {% endif %}
