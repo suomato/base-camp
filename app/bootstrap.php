@@ -1,5 +1,7 @@
 <?php
 
+use Basecamp\Utils\Session;
+
 // Load all composer packages
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -12,6 +14,9 @@ $dotenv->load();
 
 // Load WordPress config files
 require_once __DIR__ . '/../app/config/autoload.php';
+
+// Init Sessions
+Session::init();
 
 /**
  * Loads the theme's translated strings.
