@@ -89,6 +89,9 @@ class PostType
 
     public static function get()
     {
-        return \Timber::get_posts(array_merge(['post_type' => self::post_type()], static::$args));
+        $result       = \Timber::get_posts(array_merge(['post_type' => self::post_type()], static::$args));
+        static::$args = [];
+
+        return $result;
     }
 }

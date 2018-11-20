@@ -1,7 +1,6 @@
 {
   "name": "suomato/base-camp",
-  "description":
-    "Awesome WordPress starter theme with own CLI for developers based on modern web technologies.",
+  "description": "Awesome WordPress starter theme with own CLI for developers based on modern web technologies.",
   "license": "MIT",
   "keywords": [
     "bulma",
@@ -27,7 +26,10 @@
   ],
   "extra": {
     "installer-paths": {
-      "../../plugins/{$name}/": ["wpackagist-plugin/*", "type:wordpress-plugin"]
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
     }
   },
   "require": {
@@ -41,10 +43,16 @@
     "timber/timber": "^1.7"
   },
   "autoload": {
-    "files": ["app/helpers.php", "resources/languages/messages.php"],
-    "classmap": ["app/timber-extends"],
+    "files": [
+      "app/helpers.php",
+      "resources/languages/messages.php"
+    ],
+    "classmap": [
+      "app/timber-extends"
+    ],
     "psr-4": {
-      "Basecamp\\Models\\": "app/models/"
+      "Basecamp\\Models\\": "app/models/",
+      "Basecamp\\Utils\\": "app/utils/"
     }
   },
   "scripts": {
