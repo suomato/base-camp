@@ -5,7 +5,7 @@
  */
 function base_camp_scripts_and_styles()
 {
-    //
+    // Helps to prevent CSS caching
     $suffix = bc_env('MODE', 'production') === 'development' ? '?' . bc_random_string(16) : '';
 
     // Register styles
@@ -22,7 +22,9 @@ function base_camp_scripts_and_styles()
     wp_enqueue_script('base-camp-scripts');
     wp_enqueue_script('base-camp-vendor');
     wp_enqueue_style('base-camp-styles');
-    wp_enqueue_style('base-camp-styles-vue');
+    if (has_assets('scripts.css')) {
+        wp_enqueue_style('base-camp-styles-vue');
+    }
 
     // comment reply script for threaded comments
     if (is_singular() && comments_open() && (get_option('thread_comments') == 1)) {

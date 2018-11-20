@@ -89,3 +89,17 @@ function bc_random_string($length)
 {
     return substr(bin2hex(random_bytes($length)), 0, $length);
 }
+
+/**
+ * Return true if assets file exists
+ *
+ * @param string $key
+ * @return boolean
+ */
+function has_assets($key)
+{
+    $manifest_string = file_get_contents(get_template_directory() . '/static/manifest.json');
+    $manifest_array  = json_decode($manifest_string, true);
+
+    return @file_get_contents(get_stylesheet_directory_uri() . '/static/' . $manifest_array[$key]);
+}
