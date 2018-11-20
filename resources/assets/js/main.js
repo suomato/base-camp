@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import Vue from 'vue';
-import Example from './components/Example';
+// import Example from './components/Example';
 
 new Vue({
   el: '#app',
   components: {
-    Example,
+    // Example,
   },
 });
 
