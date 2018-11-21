@@ -24,7 +24,10 @@ const extractCss = {
 
 const cssLoader = {
   loader: 'css-loader',
-  options: { minimize: inProduction },
+  options: {
+    importLoaders: 1,
+    sourceMap: true,
+  },
 };
 
 const images = [
@@ -55,6 +58,12 @@ module.exports = {
     filename: `js/[name]${scriptHash}.js`,
   },
 
+  watchOptions: {
+    ignored: /node_modules/,
+  },
+
+  devtool: false,
+
   module: {
     rules: [
       {
@@ -68,31 +77,46 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['vue-style-loader', extractCss, cssLoader],
+        use: ['vue-style-loader', extractCss, cssLoader, 'postcss-loader'],
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           'vue-style-loader',
           extractCss,
           cssLoader,
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
           {
             loader: 'sass-loader',
             options: {
               includePaths: [
                 path.resolve(__dirname, '../resources/assets/sass'),
               ],
-              data: '@import "vue-styles";',
+              data: '@import "shared-with-vue";',
+              sourceMap: true,
             },
           },
         ],
       },
       {
         test: /\.sass$/,
+        exclude: /node_modules/,
         use: [
           'vue-style-loader',
           extractCss,
           cssLoader,
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
           {
             loader: 'sass-loader',
             options: {
@@ -100,7 +124,8 @@ module.exports = {
               includePaths: [
                 path.resolve(__dirname, '../resources/assets/sass'),
               ],
-              data: '@import "vue-styles";',
+              data: '@import "shared-with-vue";',
+              sourceMap: true,
             },
           },
         ],
@@ -146,7 +171,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
 
-    new CleanWebpackPlugin(['static/css/*', 'static/js/*'], {
+    new CleanWebpackPlugin(['static'], {
       root: path.join(__dirname, '../'),
       watch: false,
     }),
@@ -158,6 +183,7 @@ module.exports = {
     }),
 
     new ManifestPlugin(),
+
 
     new BrowserSyncPlugin({
       host: 'localhost',
@@ -172,11 +198,17 @@ module.exports = {
   ],
 };
 
+if (!inProduction) {
+  module.exports.plugins.push(
+    new webpack.SourceMapDevToolPlugin({}),
+  );
+}
+
 if (inProduction) {
   module.exports.plugins.push(
     new PurgecssPlugin({
       paths: () => glob.sync(path.join(__dirname, '../resources/**/*'), { nodir: true }),
-      only: ['styles'],
+      only: ['styles', 'scripts'],
       whitelist: config.whitelist,
     }),
   );
