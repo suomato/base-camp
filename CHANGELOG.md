@@ -1,3 +1,24 @@
+## **v1.9.0 (2018-11-21)**
+
+### Added
+* Postcss support
+* Inject CSS support (update css styles without page reload)
+* WordPress specific class to navigation
+* PHP mode to .env file ('development' and 'production')
+* Show current template file name in bottom right corner on development mode
+* Mode value to Timber globals
+* Session Util `/app/utils/Session.php`
+* has_assets helper
+* airbnb eslint
+
+### Fixed
+* Android navbar scrolling bug
+* Issue #16 Refresh css styles without page reload
+* Issue #19 Security Function creates double pageload in admin area
+
+### Changed
+* bulma 0.6.2 -> 0.7.2
+
 ## **v1.8.2 (2018-08-09)**
 
 ### Changed

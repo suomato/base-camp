@@ -2,9 +2,9 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Base camp 1.8.2\n"
+"Project-Id-Version: Base camp 1.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/base-camp\n"
-"POT-Creation-Date: 2018-08-09 08:25:52+00:00\n"
+"POT-Creation-Date: 2018-11-21 20:10:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Main menu"
 msgstr ""
 
-#: app/config/wp/security.php:55
+#: app/config/wp/security.php:56
 msgid "Oops! Incorrect input"
 msgstr ""
 
@@ -106,6 +106,266 @@ msgstr ""
 
 #: single.php:6
 msgid "Cancel reply"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:7
+msgctxt "Post Type General Name"
+msgid "Movies"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:8
+msgctxt "Post Type Singular Name"
+msgid "Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:9
+msgid "Movies"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:10
+msgid "Parent Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:11
+msgid "All Movies"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:12
+msgid "View Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:13
+msgid "Add New Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:14
+msgid "Add New"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:15
+msgid "Edit Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:16
+msgid "Update Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:17
+msgid "Search Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:18
+msgid "Not Found"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:19
+msgid "Not found in Trash"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:24
+msgid "movies"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-post-type.php:25
+msgid "Movie"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:7
+msgctxt "Taxonomy general name"
+msgid "Genres"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:8
+msgctxt "Taxonomy singular name"
+msgid "Genre"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:9
+msgid "Search Genres"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:10
+msgid "All Genres"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:11
+msgid "Parent Genre"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:12
+msgid "Parent Genre:"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:13
+msgid "Edit Genre"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:14
+msgid "Update Genre"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:15
+msgid "Add New Genre"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:16
+msgid "New Genre Name"
+msgstr ""
+
+#: vendor/suomato/luna/src/templates/custom-taxonomy.php:17
+msgid "Genre"
+msgstr ""
+
+#: vendor/timber/timber/lib/Archives.php:160
+msgid "%1$s %2$d"
+msgstr ""
+
+#: vendor/timber/timber/lib/Archives.php:162
+msgid "%1$s"
+msgstr ""
+
+#: vendor/timber/timber/lib/Pagination.php:115
+msgid "&laquo; Previous"
+msgstr ""
+
+#: vendor/timber/timber/lib/Pagination.php:116
+msgid "Next &raquo;"
+msgstr ""
+
+#: vendor/timber/timber/lib/Pagination.php:179
+#: vendor/timber/timber/lib/TextHelper.php:26
+#: vendor/timber/timber/lib/TextHelper.php:44
+msgid "&hellip;"
+msgstr ""
+
+#. translators: If your word count is based on single characters (East Asian
+#. characters), enter 'characters'. Otherwise, enter 'words'. Do not translate
+#. into your own language.
+#: vendor/timber/timber/lib/TextHelper.php:53
+msgctxt "word count: words or characters?"
+msgid "words"
+msgstr ""
+
+#: vendor/timber/timber/tests/test-timber-gettext.php:8
+#: vendor/timber/timber/tests/test-timber-gettext.php:21
+msgid "my_boo"
+msgstr ""
+
+#: vendor/timber/timber/tests/test-timber-gettext.php:29
+#: vendor/timber/timber/tests/test-timber-gettext.php:31
+msgid "foo"
+msgid_plural "foos"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/timber/timber/tests/test-timber-gettext.php:37
+#: vendor/timber/timber/tests/test-timber-gettext.php:44
+#: vendor/timber/timber/tests/test-timber-gettext.php:52
+#: vendor/timber/timber/tests/test-timber-gettext.php:54
+msgctxt "my"
+msgid "boo"
+msgstr ""
+
+#: vendor/timber/timber/tests/test-timber-menu.php:512
+#: vendor/timber/timber/tests/test-timber-menu.php:513
+msgid "Gallery"
+msgstr ""
+
+#. translators: 1: audio track title, 2: album title, 3: artist name
+#: vendor/timber/timber/tests/wp-overrides.php:40
+msgid "\"%1$s\" from %2$s by %3$s."
+msgstr ""
+
+#. translators: 1: audio track title, 2: album title
+#: vendor/timber/timber/tests/wp-overrides.php:43
+msgid "\"%1$s\" from %2$s."
+msgstr ""
+
+#. translators: 1: audio track title, 2: artist name
+#: vendor/timber/timber/tests/wp-overrides.php:46
+msgid "\"%1$s\" by %2$s."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:48
+msgid "\"%s\"."
+msgstr ""
+
+#. translators: 1: audio album title, 2: artist name
+#: vendor/timber/timber/tests/wp-overrides.php:55
+msgid "%1$s by %2$s."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:67
+msgid "Released: %d."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:72
+msgid "Track %1$s of %2$s."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:74
+msgid "Track %1$s."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:78
+msgid "Genre: %s."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:143
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:144
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:145
+msgid "The uploaded file was only partially uploaded."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:146
+msgid "No file was uploaded."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:148
+msgid "Missing a temporary folder."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:149
+msgid "Failed to write file to disk."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:150
+msgid "File upload stopped by extension."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:167
+msgid "Invalid form submission."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:177
+msgid "File is empty. Please upload something more substantial."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:179
+msgid ""
+"File is empty. Please upload something more substantial. This error could "
+"also be caused by uploads being disabled in your php.ini or by post_max_size "
+"being defined as smaller than upload_max_filesize in php.ini."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:185
+msgid "Specified file failed upload test."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:198
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr ""
+
+#: vendor/timber/timber/tests/wp-overrides.php:223
+msgid "The uploaded file could not be moved to %s."
 msgstr ""
 
 #. Theme Name of the plugin/theme
