@@ -8,5 +8,6 @@ $context['cancel_link'] = get_cancel_comment_reply_link(__('Cancel reply', 'base
 if (post_password_required($post->ID)) {
     Timber::render('single-password.twig', $context);
 } else {
-    Timber::render(['single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'], $context);
+    $post_type = $post->post_type === 'revision' ? get_post_type($post->post_parent)  : $post->post_type;
+    Timber::render(['single-' . $post->ID . '.twig', 'single-' . $post_type . '.twig', 'single.twig'], $context);
 }
