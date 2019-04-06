@@ -8,9 +8,11 @@ require_once __DIR__ . '/../vendor/autoload.php';
 // Init Timber
 $timber = new \Timber\Timber();
 
-// Init Dotenv
-$dotenv = new Dotenv\Dotenv(__DIR__ . '/..');
-$dotenv->load();
+// Init Dotenv if .env file is present
+if (file_exists(__DIR__ . '/../.env')) {
+    $dotenv = new Dotenv\Dotenv(__DIR__ . '/..');
+    $dotenv->load();
+}
 
 // Load WordPress config files
 require_once __DIR__ . '/../app/config/autoload.php';
