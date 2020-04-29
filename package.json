@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "bulma": "0.7.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "vue": "^2.5.16"
   }
 }
