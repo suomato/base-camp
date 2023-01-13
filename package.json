@@ -44,7 +44,7 @@
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.14.0",
-    "webpack-cli": "^3.0.8",
+    "webpack-cli": "^3.3.12",
     "webpack-fix-style-only-entries": "^0.0.5",
     "webpack-manifest-plugin": "^2.0.3"
   },
